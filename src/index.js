@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { ManageTwitterAuth, TwitterAuth } from './components/TwitterAuth'
+import { TwitterAuthCallback, TwitterAuth } from './components/TwitterAuth'
 
 import * as serviceWorker from './serviceWorker';
 
@@ -16,7 +16,7 @@ const DonatioApp = () => {
           <TwitterAuth />
         </Route>
         <Route path="/twitter">
-          <ManageTwitterAuth />
+          <TwitterAuthCallback />
         </Route>
         <Route path="/">
           <App />
