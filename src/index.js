@@ -2,12 +2,32 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { ManageTwitterAuth, TwitterAuth } from './components/TwitterAuth'
+
 import * as serviceWorker from './serviceWorker';
 
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+
+const DonatioApp = () => {
+  return (<Router>
+    <div>
+      <Switch>
+        <Route path="/twitterAuth">
+          <TwitterAuth />
+        </Route>
+        <Route path="/twitter">
+          <ManageTwitterAuth />
+        </Route>
+        <Route path="/">
+          <App />
+        </Route>
+      </Switch>
+    </div>
+  </Router>)
+}
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <DonatioApp />,
   document.getElementById('root')
 );
 
