@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import Twitter from 'twitter-lite'
 import axios from 'axios'
-import qs from 'qs'
 import QueryString from 'query-string'
 
 const TwitterAuthCallback = () => {
@@ -11,8 +10,6 @@ const TwitterAuthCallback = () => {
         // url pararms.
 
         let parsed_params = QueryString.parse(window.location.search)
-        console.log(`Parsed params`)
-        console.log(parsed_params)
 
         axios.post("http://localhost:4000/graphql", {
             'query': `query { processTwitterAuth (oauth_token: "${parsed_params.oauth_token}", oauth_verifier: "${parsed_params.oauth_verifier}") { oauth_token, oauth_token_secret } }`
