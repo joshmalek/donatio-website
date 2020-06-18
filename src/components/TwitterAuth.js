@@ -14,18 +14,26 @@ const TwitterAuthCallback = () => {
         console.log(`Parsed params`)
         console.log(parsed_params)
 
-        // axios({
-        //     method: 'POST',
-        //     url: 'https://api.twitter.com/oauth/access_token',
-        //     data: qs.stringify({
-        //         oauth_consumer_key: "ElvTnb0OJ3J9DSF9cCI3HZXTl", // TODO HIDE THIS!
-        //         oauth_token: ,
-        //         oauth_verifier: 
-        //     }),
-        //     headers: {
-        //         'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
-        //     }
-        // })
+        axios({
+            method: 'POST',
+            url: 'https://api.twitter.com/oauth/access_token',
+            data: qs.stringify({
+                oauth_consumer_key: "ElvTnb0OJ3J9DSF9cCI3HZXTl", // TODO HIDE THIS!
+                oauth_token: parsed_params.oauth_token,
+                oauth_verifier: parsed_params.oauth_verifier
+            }),
+            headers: {
+                'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+            }
+        })
+        .then(res => {
+            console.log(`Twitter API returned:`)
+            console.log(res)
+        })
+        .catch(err => {
+            console.log(`Error making Twitter API call`)
+            console.log(err)
+        })
 
     }, []);
 
