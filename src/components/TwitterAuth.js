@@ -22,6 +22,9 @@ const TwitterAuthCallback = () => {
             console.log(`Error making Twitter API call`)
             console.log(err)
         })
+        .finally(() => {
+            window.close ()
+        })
 
     }, []);
 
