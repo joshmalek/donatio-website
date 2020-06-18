@@ -12,7 +12,7 @@ const TwitterAuthCallback = () => {
         let parsed_params = QueryString.parse(window.location.search)
 
         axios.post("http://localhost:4000/graphql", {
-            'query': `query { processTwitterAuth (oauth_token: "${parsed_params.oauth_token}", oauth_verifier: "${parsed_params.oauth_verifier}") { oauth_token, oauth_token_secret } }`
+            'query': `query { processTwitterAuth (oauth_token: "${parsed_params.oauth_token}", oauth_verifier: "${parsed_params.oauth_verifier}") }`
         })
         .then(res => {
             console.log(`Twitter API returned:`)
