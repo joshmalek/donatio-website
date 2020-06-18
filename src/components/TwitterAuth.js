@@ -14,19 +14,6 @@ const TwitterAuthCallback = () => {
         console.log(`Parsed params`)
         console.log(parsed_params)
 
-        axios({
-            method: 'POST',
-            url: 'https://api.twitter.com/oauth/access_token',
-            data: qs.stringify({
-                oauth_consumer_key: "ElvTnb0OJ3J9DSF9cCI3HZXTl", // TODO HIDE THIS!
-                oauth_token: parsed_params.oauth_token,
-                oauth_verifier: parsed_params.oauth_verifier
-            }),
-            headers: {
-                'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
-            }
-        })
-
         axios.post("http://localhost:4000/graphql", {
             'query': `query { processTwitterAuth (oauth_token: "parsed_params.oauth_token", oauth_verifier: "parsed_params.oauth_verifier") { oauth_token, oauth_token_secret } }`
         })
