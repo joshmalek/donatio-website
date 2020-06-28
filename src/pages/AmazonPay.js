@@ -1,56 +1,24 @@
 import React, { useEffect, useState } from "react";
 import HtmlToReactParser from "html-to-react";
+import AmazonPay from "amazon-pay-react";
 
 const AmazonPayTest = () => {
-  const amazon_pay_script = `
-<div
-  data-ap-widget-type="expressPaymentButton"
-  data-ap-signature="9ic1gmWzYAO28xmBYBDLORVfGdXouD%2BoAc%2F2E7fFMgk%3D"
-  data-ap-seller-id="A2PNSD9U3NZBP4"
-  data-ap-access-key="AKIAJ5UW7IIODOHZSZKQ"
-  data-ap-lwa-client-id="amzn1.application-oa2-client.659d839c0bde45ec92f518eeec30cb96"
-  data-ap-return-url="http://donatio-site.herokuapp.com/amazonpay"
-  data-ap-currency-code="USD"
-  data-ap-amount="25"
-  data-ap-note=""
-  data-ap-shipping-address-required="false"
-  data-ap-payment-action="Authorize"
-></div>`;
-
-  const [amazonElement, setAmazonElement] = useState(null);
-
-  useEffect(() => {
-    // let HTMLParser = HtmlToReactParser.Parser;
-    // let htmlParser = new HTMLParser();
-
-    // let element_ = htmlParser.parse(amazon_pay_script);
-    // setAmazonElement(element_);
-
-    // load the script
-    const script = document.createElement("script");
-
-    script.src =
-      "https://static-na.payments-amazon.com/OffAmazonPayments/us/sandbox/js/Widgets.js%22%3E";
-    script.async = true;
-
-    document.body.appendChild(script);
-  }, []);
-
   return (
     <div>
-      <div
-        data-ap-widget-type="expressPaymentButton"
-        data-ap-signature="9ic1gmWzYAO28xmBYBDLORVfGdXouD%2BoAc%2F2E7fFMgk%3D"
-        data-ap-seller-id="A2PNSD9U3NZBP4"
-        data-ap-access-key="AKIAJ5UW7IIODOHZSZKQ"
-        data-ap-lwa-client-id="amzn1.application-oa2-client.659d839c0bde45ec92f518eeec30cb96"
-        data-ap-return-url="http://donatio-site.herokuapp.com/amazonpay"
-        data-ap-currency-code="USD"
-        data-ap-amount="25"
-        data-ap-note=""
-        data-ap-shipping-address-required="false"
-        data-ap-payment-action="Authorize"
-      ></div>
+      <AmazonPay
+        clientId="amzn1.application-oa2-client.659d839c0bde45ec92f518eeec30cb96"
+        sellerId="A2PNSD9U3NZBP4"
+        agreementType={"BillingAgreement"}
+        scope="profile payments:widget"
+        btnType="PwA"
+        btnColor="Gold"
+        btnSize="medium"
+        onConsentChange={(hasConsent) => {}}
+        handleBillingAgreementId={(billingAgreementId) => {}}
+        billingAgreementId={this.state.billingAgreementId}
+        useAmazonAddressBook={true}
+        isSandbox
+      />
     </div>
   );
 };
