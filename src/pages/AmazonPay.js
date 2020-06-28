@@ -30,7 +30,7 @@ const AmazonPayTest = () => {
     setAmazonElement(element_);
   }, []);
 
-  retutn(<div>{amazonElement != null && amazonElement}</div>);
+  return <div>{amazonElement != null && amazonElement}</div>;
 };
 
 const AmazonPayTest2 = () => {
