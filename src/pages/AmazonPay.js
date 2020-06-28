@@ -3,10 +3,8 @@ import HtmlToReactParser from "html-to-react";
 import AmazonPay from "amazon-pay-react";
 
 const AmazonPayTest = () => {
+  const [billingAgreement, setBillingAgreement] = useState(null);
   return (
-
-    [billingAgreement, setBillingAgreement] = useState(null)
-
     <div>
       <AmazonPay
         clientId="amzn1.application-oa2-client.659d839c0bde45ec92f518eeec30cb96"
