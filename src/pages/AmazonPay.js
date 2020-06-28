@@ -37,7 +37,7 @@ const AmazonPayReturn = () => {
   return <div>Amazon Pay Return!</div>;
 };
 
-export { AmazonPayTest, AmazonPayTest };
+export { AmazonPayTest, AmazonPayReturn };
 
 {
   /* <script
