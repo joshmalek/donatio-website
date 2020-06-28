@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import HtmlToReactParser from "html-to-react";
 
 const AmazonPayTest = () => {
-  const amazon_pay_script = `<script
-  async
-  src="https://static-na.payments-amazon.com/OffAmazonPayments/us/sandbox/js/Widgets.js%22%3E"
-></script>
+  const amazon_pay_script = `
 <div
   data-ap-widget-type="expressPaymentButton"
   data-ap-signature="9ic1gmWzYAO28xmBYBDLORVfGdXouD%2BoAc%2F2E7fFMgk%3D"
@@ -28,6 +25,15 @@ const AmazonPayTest = () => {
 
     let element_ = htmlParser.parse(amazon_pay_script);
     setAmazonElement(element_);
+
+    // load the script
+    const script = document.createElement("script");
+
+    script.src =
+      "https://static-na.payments-amazon.com/OffAmazonPayments/us/sandbox/js/Widgets.js%22%3E";
+    script.async = true;
+
+    document.body.appendChild(script);
   }, []);
 
   return <div>{amazonElement != null && amazonElement}</div>;
