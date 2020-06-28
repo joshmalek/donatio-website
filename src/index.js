@@ -3,7 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import { AmazonPayTest, AmazonPayReturn } from "./pages/AmazonPay";
+import {
+  AmazonPayTest,
+  AmazonPayTest2,
+  AmazonPayReturn,
+} from "./pages/AmazonPay";
 
 import { TwitterAuthCallback, TwitterAuth } from "./components/TwitterAuth";
 
@@ -33,7 +37,7 @@ const DonatioApp = () => {
             <Contact />
           </Route>
           <Route path="/amazonPayTest">
-            <AmazonPayTest />
+            <AmazonPayTest2 />
           </Route>
           <Route path="/amazonpay">
             <AmazonPayReturn />
