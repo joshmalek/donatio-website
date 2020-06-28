@@ -33,15 +33,11 @@ const AmazonPayTest = () => {
   return <div>{amazonElement != null && amazonElement}</div>;
 };
 
-const AmazonPayTest2 = () => {
-  return <div>Test?</div>;
-};
-
 const AmazonPayReturn = () => {
   return <div>Amazon Pay Return!</div>;
 };
 
-export { AmazonPayTest, AmazonPayReturn, AmazonPayTest2 };
+export { AmazonPayTest, AmazonPayReturn };
 
 {
   /* <script
