@@ -4,6 +4,9 @@ import AmazonPay from "amazon-pay-react";
 
 const AmazonPayTest = () => {
   return (
+
+    [billingAgreement, setBillingAgreement] = useState(null)
+
     <div>
       <AmazonPay
         clientId="amzn1.application-oa2-client.659d839c0bde45ec92f518eeec30cb96"
@@ -15,7 +18,7 @@ const AmazonPayTest = () => {
         btnSize="medium"
         onConsentChange={(hasConsent) => {}}
         handleBillingAgreementId={(billingAgreementId) => {}}
-        billingAgreementId={this.state.billingAgreementId}
+        billingAgreementId={billingAgreement}
         useAmazonAddressBook={true}
         isSandbox
       />
