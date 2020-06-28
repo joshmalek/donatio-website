@@ -25,14 +25,14 @@ const DonatioApp = () => {
           <Route path="/twitter">
             <TwitterAuthCallback />
           </Route>
-          <Route path="/">
-            <App />
-          </Route>
           <Route path="/privacy">
             <PrivacyPolicy />
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/">
+            <App />
           </Route>
         </Switch>
       </div>
