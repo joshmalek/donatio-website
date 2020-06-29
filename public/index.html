@@ -29,9 +29,7 @@
     <script>
       window.onAmazonLoginReady = function () {
         console.log(`onAmazonLoginReady called!`);
-        amazon.Login.setClientId(
-          "amzn1.application-oa2-client.659d839c0bde45ec92f518eeec30cb96"
-        );
+        amazon.Login.setClientId(process.env.REACT_APP_AMAZON_CLIENT_ID);
       };
       window.onAmazonPaymentsReady = function () {
         console.log(`onAmazonPaymentsReady called!`);
@@ -40,7 +38,7 @@
 
           OffAmazonPayments.Button(
             "AmazonPayButton",
-            "A2PNSD9U3NZBP4", // Seller ID
+            process.env.REACT_APP_AMAZON_SELLER_ID, // Seller ID
             {
               type: "PwA",
               color: "Gold",
