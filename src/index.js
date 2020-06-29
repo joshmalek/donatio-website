@@ -49,6 +49,46 @@ const DonatioApp = () => {
 
 ReactDOM.render(<DonatioApp />, document.getElementById("root"));
 
+// AmazonPay
+
+window.onAmazonLoginReady = function () {
+  amazon.Login.setClientId(
+    "amzn1.application-oa2-client.659d839c0bde45ec92f518eeec30cb96"
+  );
+};
+window.onAmazonPaymentsReady = function () {
+  window.showButton = function () {
+    var authRequest;
+
+    OffAmazonPayments.Button(
+      "AmazonPayButton",
+      "A2PNSD9U3NZBP4", // Seller ID
+      {
+        type: "PwA",
+        color: "Gold",
+        size: "medium",
+        authorization: function () {
+          loginOptions = {
+            scope: "profile payments:widget",
+            popup: true,
+          };
+          authRequest = amazon.Login.authorize(
+            loginOptions,
+            "%PUBLIC_URL%/pay-with-amazon"
+          );
+        },
+        onError: function (error) {
+          console.log(error.toString());
+        },
+      }
+    );
+  };
+};
+
+document.getElementById("Logout").onclick = function () {
+  amazon.Login.logout();
+};
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
