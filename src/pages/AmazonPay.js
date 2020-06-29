@@ -7,10 +7,16 @@ const AmazonPayReturn = () => {
 };
 
 const AmazonPayTest = () => {
+  const [buttonLoaded, setButtonLoaded] = useState(false);
+
   useEffect(() => {
     // Setup Amazon Pay.
-
-    window.showButton();
+    setTimeout(() => {
+      if (!buttonLoaded) {
+        let result_ = window.showButton();
+        if (result_) setButtonLoaded(true);
+      }
+    }, 1500);
   }, []);
 
   return <div id="AmazonPayButton"></div>;
