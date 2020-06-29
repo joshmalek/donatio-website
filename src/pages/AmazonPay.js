@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import HtmlToReactParser from "html-to-react";
 // import AmazonPay from "amazon-pay-react";
 
 const AmazonPayReturn = () => {
