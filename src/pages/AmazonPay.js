@@ -6,7 +6,7 @@ const AmazonPayReturn = () => {
   return <div>Amazon Pay Return!</div>;
 };
 
-const AmazonPayTest = () => {
+const AmazonPayInit = () => {
   const [buttonLoaded, setButtonLoaded] = useState(false);
 
   useEffect(() => {
@@ -22,4 +22,4 @@ const AmazonPayTest = () => {
   return <div id="AmazonPayButton"></div>;
 };
 
-export { AmazonPayTest, AmazonPayReturn };
+export { AmazonPayInit, AmazonPayReturn };

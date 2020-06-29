@@ -28,11 +28,9 @@
 
     <script>
       window.onAmazonLoginReady = function () {
-        console.log(`onAmazonLoginReady called!`);
         amazon.Login.setClientId("%REACT_APP_AMAZON_CLIENT_ID%");
       };
       window.onAmazonPaymentsReady = function () {
-        console.log(`onAmazonPaymentsReady called!`);
         window.showButton = function () {
           var authRequest;
 
@@ -50,7 +48,7 @@
                 };
                 authRequest = amazon.Login.authorize(
                   loginOptions,
-                  "%PUBLIC_URL%/pay-with-amazon"
+                  "%PUBLIC_URL%/amazonPayReturn"
                 );
               },
               onError: function (error) {
