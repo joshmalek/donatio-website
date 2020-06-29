@@ -9,8 +9,6 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 require("dotenv").config();
-console.log(process.env.REACT_APP_AMAZON_CLIENT_ID);
-console.log(process.env.REACT_APP_AMAZON_SELLER_ID);
 
 const Contact = () => {
   return <div>TODO: Contact</div>;
