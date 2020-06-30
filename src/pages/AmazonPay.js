@@ -13,7 +13,10 @@ const AmazonPayReturn = () => {
     // call the address book api
     setTimeout(() => {
       if (!addressBookLoaded) {
-        let result_ = window.showAddressBook();
+        let result_ = window.showAddressBook((order_ref_id) => {
+          // load the wallet.
+          window.showWallet(order_ref_id);
+        });
         if (result_) setAddressBookLoaded(true);
       }
     }, 1500);
