@@ -47,7 +47,8 @@
               size: "medium",
               authorization: function () {
                 loginOptions = {
-                  scope: "profile payments:widget",
+                  scope:
+                    "profile payments:widget payments:shipping_address payments:billing_address",
                   popup: true,
                 };
                 authRequest = amazon.Login.authorize(
@@ -68,7 +69,8 @@
           console.log(`Showing address book!`);
           addressBookWidget = new OffAmazonPayments.Widgets.AddressBook({
             sellerId: "%REACT_APP_AMAZON_SELLER_ID%",
-            scope: "profile payments:widget",
+            scope:
+              "profile payments:widget payments:shipping_address payments:billing_address",
             onOrderReferenceCreate: function (orderReference) {
               // Here is where you can grab the Order Reference ID.
               orderReference.getAmazonOrderReferenceId();
