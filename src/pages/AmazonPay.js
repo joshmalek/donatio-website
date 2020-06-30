@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import QueryString from "query-string";
 
 const AmazonPayReturn = () => {
-  const [addressBookLoaded, setAddressBookLoaded] = useState(falst);
+  const [addressBookLoaded, setAddressBookLoaded] = useState(false);
 
   useEffect(() => {
     let parsed_params = QueryString.parse(window.location.search);
