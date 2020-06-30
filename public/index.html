@@ -67,6 +67,7 @@
 
         window.showAddressBook = function () {
           console.log(`Showing address book!`);
+          let reference_id = null;
           addressBookWidget = new OffAmazonPayments.Widgets.AddressBook({
             sellerId: "%REACT_APP_AMAZON_SELLER_ID%",
             scope:
@@ -74,6 +75,7 @@
             onOrderReferenceCreate: function (orderReference) {
               // Here is where you can grab the Order Reference ID.
               orderReference.getAmazonOrderReferenceId();
+              reference_id = orderReference.getAmazonOrderReferenceId();
             },
             onAddressSelect: function (orderReference) {
               // Replace the following code with the action that you want
@@ -83,7 +85,7 @@
               console.log(`Address selected`);
               console.log(orderReference);
               console.log("Order reference id:");
-              console.log(orderReference.getAmazonOrderReferenceId());
+              console.log(reference_id);
             },
             design: {
               designMode: "responsive",
