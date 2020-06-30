@@ -20,8 +20,9 @@ const AmazonPayReturn = () => {
   }, []);
 
   return (
-    <div id="addressBookWidgetDiv" className="addressBookWidgetDiv">
-      {" "}
+    <div>
+      <div id="addressBookWidgetDiv" className="amazonCheckoutWidget"></div>
+      <div id="walletWidgetDiv" className="amazonCheckoutWidget"></div>
     </div>
   );
 };

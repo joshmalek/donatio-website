@@ -82,7 +82,8 @@
               // details by calling the GetOrderReferenceDetails operation.
               console.log(`Address selected`);
               console.log(orderReference);
-              console.log(orderReference.GetOrderReferenceDetails());
+              console.log("Order reference id:")
+              console.log(orderReference.getAmazonOrderReferenceId();)
             },
             design: {
               designMode: "responsive",
@@ -99,13 +100,46 @@
               // code to view error messages:
               // console.log(error.getErrorCode() + ': ' + error.getErrorMessage());
               // See "Handling Errors" for more information.
-              console.log(`Error: `);
-              console.log(error);
+              console.log(`AddressBook Error: `);
+              console.log(
+                error.getErrorCode() + ": " + error.getErrorMessage()
+              );
             },
           });
           addressBookWidget.bind("addressBookWidgetDiv");
           return true;
         };
+
+        // window.showWallet = function () {
+        //   walletWidget = new OffAmazonPayments.Widgets.Wallet({
+        //     sellerId: "%REACT_APP_AMAZON_SELLER_ID%",
+        //     scope:
+        //       "profile payments:widget payments:shipping_address payments:billing_address",
+        //     amazonOrderReferenceId: "ORDER_REFERENCE_ID", //the one you created before, most likely in the AddressBook widget
+        //     onPaymentSelect: function (orderReference) {
+        //       // Replace this code with the action that you want to perform
+        //       // after the payment method is selected.
+        //       // Ideally, this would enable the next action for the buyer
+        //       // including either a "Continue" or "Place Order" button.
+        //       console.log(`Payment option selected!`);
+        //       console.log(orderReference);
+        //     },
+        //     design: {
+        //       designMode: "responsive",
+        //     },
+        //     onError: function (error) {
+        //       // Your error handling code.
+        //       // During development you can use the following
+        //       // code to view error messages:
+        //       // console.log(error.getErrorCode() + ': ' + error.getErrorMessage());
+        //       // See "Handling Errors" for more information.
+        //       console.log(`Wallet error:`);
+        //       console.log(
+        //         error.getErrorCode() + ": " + error.getErrorMessage()
+        //       );
+        //     },
+        //   });
+        // };
       };
     </script>
     <script
