@@ -8,7 +8,8 @@
 
 .addressBookWidgetDiv {
   height: 500px;
-  width: 300px;
+  width: 450px;
+  min-width: 300px;
   margin: 0 auto;
 }
 
