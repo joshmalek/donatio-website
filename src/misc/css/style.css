@@ -39,3 +39,19 @@
   height: 165px;
   max-height: 180px;
 }
+
+.parallel-btn {
+  background-color: #202020;
+  width: 180px;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 auto;
+  transform: skew(-40deg, 0deg);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.parallel-btn .btn-text {
+  transform: skew(40deg, 0deg);
+}

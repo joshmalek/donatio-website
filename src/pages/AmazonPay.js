@@ -26,6 +26,14 @@ const AmazonPayReturn = () => {
     <div>
       <div id="addressBookWidgetDiv" className="amazonCheckoutWidget"></div>
       <div id="walletWidgetDiv" className="amazonCheckoutWidget"></div>
+      <div
+        className="parallel-btn"
+        onClick={() => {
+          console.log(`Place Order clicked!`);
+        }}
+      >
+        <div className="btn-text">Place Order</div>
+      </div>
     </div>
   );
 };
