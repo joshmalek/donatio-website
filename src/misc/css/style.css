@@ -4,9 +4,12 @@
   min-width: 300px;
   width: 100%;
   max-width: 900px;
-  min-height: 228px;
-  height: 240px;
-  max-height: 400px;
+}
+
+.addressBookWidgetDiv {
+  height: 500px;
+  width: 300px;
+  margin: 0 auto;
 }
 
 #walletWidgetDiv {
