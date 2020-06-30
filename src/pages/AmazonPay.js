@@ -5,7 +5,7 @@ import axios from "axios";
 
 const AmazonPayReturn = () => {
   const [orderId, setOrderId] = useState(null);
-  const [orderSetupComplete, setOrderSetupComplete] = useState(false);
+  const [addressBookLoaded, setAddressBookLoaded] = useState(false);
 
   const completeOrder = () => {
     console.log(`Order Complete initiated.`);
