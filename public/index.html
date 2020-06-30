@@ -65,6 +65,7 @@
         };
 
         window.showAddressBook = function () {
+          console.log(`Showing address book!`);
           addressBookWidget = new OffAmazonPayments.Widgets.AddressBook({
             sellerId: "%REACT_APP_AMAZON_SELLER_ID%",
             scope: "profile payments:widget",
