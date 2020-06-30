@@ -54,4 +54,5 @@
 
 .parallel-btn .btn-text {
   transform: skew(40deg, 0deg);
+  color: white;
 }
