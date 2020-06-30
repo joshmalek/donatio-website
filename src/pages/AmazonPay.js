@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import AmazonPay from "amazon-pay-react";
 import QueryString from "query-string";
+import axios from "axios";
 
 const AmazonPayReturn = () => {
   const [addressBookLoaded, setAddressBookLoaded] = useState(false);
@@ -15,7 +16,22 @@ const AmazonPayReturn = () => {
       if (!addressBookLoaded) {
         let result_ = window.showAddressBook((order_ref_id) => {
           // load the wallet.
-          window.showWallet(order_ref_id);
+          window.showWallet(order_ref_id, (_) => {
+            let query_string = `mutation { processAmazonPay( donation_amount: ${10.0}, currency_code: "USD", order_reference_id: "${order_ref_id}" ) { total_donation } }`;
+
+            axios
+              .post("http://localhost:4000/graphql", {
+                query: query_string,
+              })
+              .then((res) => {
+                console.log(`amazonPay API Response:`);
+                console.log(res);
+              })
+              .catch((err) => {
+                console.log(`amazonPay API Error:`);
+                console.log(err);
+              });
+          });
         });
         if (result_) setAddressBookLoaded(true);
       }

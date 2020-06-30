@@ -114,7 +114,7 @@
           return true;
         };
 
-        window.showWallet = function (order_ref_id) {
+        window.showWallet = function (order_ref_id, selectCallback) {
           let walletWidget = new OffAmazonPayments.Widgets.Wallet({
             sellerId: "%REACT_APP_AMAZON_SELLER_ID%",
             scope:
@@ -127,6 +127,8 @@
               // including either a "Continue" or "Place Order" button.
               console.log(`Payment option selected!`);
               console.log(orderReference);
+
+              if (selectCallback) selectCallback(order_ref_id);
             },
             design: {
               designMode: "responsive",
