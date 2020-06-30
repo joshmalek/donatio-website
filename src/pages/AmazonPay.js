@@ -16,7 +16,7 @@ const AmazonPayReturn = () => {
         let result_ = window.showAddressBook();
         if (result_) setAddressBookLoaded(true);
       }
-    });
+    }, 1500);
   }, []);
 
   return <div id="addressBookWidgetDiv"> </div>;
