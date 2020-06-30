@@ -4,12 +4,13 @@ import QueryString from "query-string";
 import axios from "axios";
 
 const AmazonPayReturn = () => {
-  const [addressBookLoaded, setAddressBookLoaded] = useState(false);
+  const [orderId, setOrderId] = useState(null);
   const [orderSetupComplete, setOrderSetupComplete] = useState(false);
 
   const completeOrder = () => {
     console.log(`Order Complete initiated.`);
-    let query_string = `mutation { processAmazonPay( donation_amount: ${10.0}, currency_code: "USD", order_reference_id: "${order_ref_id}" ) { total_donation } }`;
+    console.log(`Order ID: ${orderId}`);
+    let query_string = `mutation { processAmazonPay( donation_amount: ${10.0}, currency_code: "USD", order_reference_id: "${orderId}" ) { total_donation } }`;
 
     axios
       .post("http://localhost:4000/graphql", {
@@ -36,7 +37,7 @@ const AmazonPayReturn = () => {
         let result_ = window.showAddressBook((order_ref_id) => {
           // load the wallet.
           window.showWallet(order_ref_id, (_) => {
-            setOrderSetupComplete(true);
+            setOrderId(order_ref_id);
           });
         });
         if (result_) setAddressBookLoaded(true);
@@ -51,7 +52,7 @@ const AmazonPayReturn = () => {
       <div
         className="parallel-btn"
         onClick={() => {
-          if (orderSetupComplete) {
+          if (orderId != null) {
             completeOrder();
           }
         }}
