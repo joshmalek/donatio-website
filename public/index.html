@@ -9,6 +9,10 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, maximum-scale=1.0"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -57,6 +61,44 @@
             }
           );
 
+          return true;
+        };
+
+        window.showAddressBook = function () {
+          addressBookWidget = new OffAmazonPayments.Widgets.AddressBook({
+            sellerId: "%REACT_APP_AMAZON_SELLER_ID%",
+            scope: "profile payments:widget",
+            onOrderReferenceCreate: function (orderReference) {
+              // Here is where you can grab the Order Reference ID.
+              orderReference.getAmazonOrderReferenceId();
+            },
+            onAddressSelect: function (orderReference) {
+              // Replace the following code with the action that you want
+              // to perform after the address is selected. The
+              // amazonOrderReferenceId can be used to retrieve the address
+              // details by calling the GetOrderReferenceDetails operation.
+              console.log(`Address selected`);
+            },
+            design: {
+              designMode: "responsive",
+            },
+            onReady: function (orderReference) {
+              // Enter code here you want to be executed
+              // when the AddressBook widget has been rendered.
+              console.log(`Address book ready`);
+            },
+
+            onError: function (error) {
+              // Your error handling code.
+              // During development you can use the following
+              // code to view error messages:
+              // console.log(error.getErrorCode() + ': ' + error.getErrorMessage());
+              // See "Handling Errors" for more information.
+              console.log(`Error: `);
+              console.log(error);
+            },
+          });
+          addressBookWidget.bind("addressBookWidgetDiv");
           return true;
         };
       };

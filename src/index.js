@@ -7,6 +7,7 @@ import { AmazonPayInit, AmazonPayReturn } from "./pages/AmazonPay";
 import { TwitterAuthCallback, TwitterAuth } from "./components/TwitterAuth";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./misc/css/style.css";
 
 require("dotenv").config();
 
