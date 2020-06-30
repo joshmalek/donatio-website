@@ -19,7 +19,11 @@ const AmazonPayReturn = () => {
     }, 1500);
   }, []);
 
-  return <div id="addressBookWidgetDiv"> </div>;
+  return (
+    <div id="addressBookWidgetDiv" className="addressBookWidgetDiv">
+      {" "}
+    </div>
+  );
 };
 
 const AmazonPayInit = () => {
