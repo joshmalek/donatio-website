@@ -18,12 +18,20 @@ const AmazonPayReturn = () => {
         .then((res) => {
           console.log(`amazonPay API Response:`);
           console.log(res);
-          // confirmationFlow.success();
+
+          if (res.data.data.processAmazonPay.success) {
+            // set session key
+            localStorage.setItem("donation_reciept", res.data.data.reciept_id);
+
+            confirmationFlow.success();
+          } else {
+            confirmationFlow.error();
+          }
         })
         .catch((err) => {
           console.log(`amazonPay API Error:`);
           console.log(err);
-          // confirmationFlow.error();
+          confirmationFlow.error();
         });
     });
   };
