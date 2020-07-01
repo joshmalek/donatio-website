@@ -1,6 +1,5 @@
 #addressBookWidgetDiv {
   min-width: 300px;
-  width: 100%;
   max-width: 900px;
 }
 
@@ -9,6 +8,7 @@
   width: 450px;
   min-width: 300px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 /* #walletWidgetDiv {
@@ -136,4 +136,10 @@
   width: 55px;
   height: 55px;
   text-align: center;
+}
+
+.donate-prompt-pay {
+  font-family: Yan;
+  font-size: 30px;
+  font-weight: 400;
 }

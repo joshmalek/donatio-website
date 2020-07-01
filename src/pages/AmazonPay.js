@@ -63,6 +63,7 @@ const AmazonPayReturn = () => {
       <div id="addressBookWidgetDiv" className="amazonCheckoutWidget"></div>
       <div id="walletWidgetDiv" className="amazonCheckoutWidget"></div>
       <div
+        style={{ marginTop: "20px" }}
         className="parallel-btn"
         onClick={() => {
           if (orderId != null) {
@@ -89,7 +90,17 @@ const AmazonPayInit = () => {
     }, 1500);
   }, []);
 
-  return <div id="AmazonPayButton"></div>;
+  return (
+    <div>
+      <div className="donate-prompt-pay">
+        Donate $12.21 to Nonprofit Name Here?
+      </div>
+      <div
+        id="AmazonPayButton"
+        style={{ width: "200px", margin: "0 auto" }}
+      ></div>
+    </div>
+  );
 };
 
 export { AmazonPayInit, AmazonPayReturn };
