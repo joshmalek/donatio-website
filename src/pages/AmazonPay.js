@@ -93,6 +93,7 @@ const AmazonPayInit = () => {
       // setDonationPrice(parsed_params.amount.toFixed(2));
     } else {
       // if the required parameters are not present, just exit the tab.
+      console.log(`Should close tab...`);
       window.close();
     }
 
