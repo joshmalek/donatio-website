@@ -8,22 +8,24 @@ const AmazonPayReturn = () => {
   const [addressBookLoaded, setAddressBookLoaded] = useState(false);
 
   const completeOrder = () => {
-    console.log(`Order Complete initiated.`);
-    console.log(`Order ID: ${orderId}`);
     let query_string = `mutation { processAmazonPay( donation_amount: ${10.0}, currency_code: "USD", order_reference_id: "${orderId}" ) { total_donation } }`;
 
-    axios
-      .post("http://localhost:4000/graphql", {
-        query: query_string,
-      })
-      .then((res) => {
-        console.log(`amazonPay API Response:`);
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(`amazonPay API Error:`);
-        console.log(err);
-      });
+    window.placeAmazonPayOrder(orderId, (confirmationFlow) => {
+      axios
+        .post("http://localhost:4000/graphql", {
+          query: query_string,
+        })
+        .then((res) => {
+          console.log(`amazonPay API Response:`);
+          console.log(res);
+          // confirmationFlow.success();
+        })
+        .catch((err) => {
+          console.log(`amazonPay API Error:`);
+          console.log(err);
+          // confirmationFlow.error();
+        });
+    });
   };
 
   useEffect(() => {

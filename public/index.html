@@ -150,6 +150,16 @@
           walletWidget.setPresentmentCurrency("USD");
           walletWidget.bind("walletWidgetDiv");
         };
+
+        window.placeAmazonPayOrder = function (order_id, initCallback) {
+          OffAmazonPayments.initConfirmationFlow(
+            "%REACT_APP_AMAZON_SELLER_ID%",
+            order_id,
+            function (confirmationFlow) {
+              if (initCallback) initCallback(confirmationFlow);
+            }
+          );
+        };
       };
     </script>
     <script
