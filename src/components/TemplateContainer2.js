@@ -1,4 +1,4 @@
-import Rect from "react";
+import React from "react";
 import Navbar from "./Navbar";
 
 const TemplateContainer2 = ({ children }) => {
