@@ -9,7 +9,7 @@ const Navbar = ({ logoOnly }) => {
           <img src={Logo} width="80%" height="80%" />
         </div>
         <div className="logo-text" style={{ color: "#000000" }}>
-          Donatio
+          DONATIO
         </div>
       </div>
       {!logoOnly & <div className="navbar-right"></div>}
