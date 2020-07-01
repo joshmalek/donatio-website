@@ -94,7 +94,7 @@ const AmazonPayInit = () => {
     } else {
       // if the required parameters are not present, just exit the tab.
       console.log(`Should close tab...`);
-      window.close();
+      window.location.replace("/");
     }
 
     // Setup Amazon Pay.
