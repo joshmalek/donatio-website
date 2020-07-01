@@ -18,12 +18,12 @@ const AmazonPayReturn = () => {
         .then((res) => {
           console.log(`amazonPay API Response:`);
           console.log(res);
-          confirmationFlow.success();
+          // confirmationFlow.success();
         })
         .catch((err) => {
           console.log(`amazonPay API Error:`);
           console.log(err);
-          confirmationFlow.error();
+          // confirmationFlow.error();
         });
     });
   };
