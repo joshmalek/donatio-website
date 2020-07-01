@@ -88,7 +88,8 @@ const AmazonPayInit = () => {
     let parsed_params = QueryString.parse(window.location.search);
     if (parsed_params.amount && parsed_params.npo_name) {
       setCharityName(parsed_params.npo_name);
-      setDonationPrice(parseInt(parsed_params.amount).toFixed(2));
+      // setDonationPrice(parseInt(parsed_params.amount).toFixed(2));
+      setDonationPrice(parsed_params.amount.toFixed(2));
     } else {
       // if the required parameters are not present, just exit the tab.
       window.close();
