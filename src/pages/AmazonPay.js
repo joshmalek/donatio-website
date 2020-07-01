@@ -50,8 +50,14 @@ const AmazonPayReturn = () => {
 
   useEffect(() => {
     let parsed_params = QueryString.parse(window.location.search);
-    console.log(`Return Params:`);
-    console.log(parsed_params);
+    if (
+      !parsed_params.access_token ||
+      !parsed_params.token_type ||
+      !parsed_params.expires_in ||
+      !parsed_params.scope
+    ) {
+      window.location.replace("/");
+    }
 
     // call the address book api
     setTimeout(() => {
@@ -95,7 +101,6 @@ const AmazonPayInit = () => {
   useEffect(() => {
     // Parse URL Params for the donation price and charity name
     let parsed_params = QueryString.parse(window.location.search);
-    console.log(parsed_params);
     if (parsed_params.amount && parsed_params.npo_name) {
       setCharityName(parsed_params.npo_name);
       setDonationPrice(parseFloat(parsed_params.amount).toFixed(2));
