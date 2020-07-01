@@ -93,7 +93,8 @@ const AmazonPayInit = () => {
   return (
     <div>
       <div className="donate-prompt-pay">
-        Donate $12.21 to Nonprofit Name Here?
+        Donate <span style={{ color: "#52ECBD" }}>$12.21</span> to Nonprofit
+        Name Here?
       </div>
       <div
         id="AmazonPayButton"
