@@ -21,7 +21,10 @@ const AmazonPayReturn = () => {
 
           if (res.data.data.processAmazonPay.success) {
             // set session key
-            localStorage.setItem("donation_reciept", res.data.data.reciept_id);
+            localStorage.setItem(
+              "donation_reciept",
+              res.data.data.processAmazonPay.reciept_id
+            );
 
             confirmationFlow.success();
           } else {
