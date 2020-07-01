@@ -82,11 +82,19 @@
 /* Donatio Style! */
 
 .donatio-container-two {
+  background: linear-gradient(290deg, #e196b3, rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(7deg, #93a0c8, rgba(0, 255, 0, 0) 70.71%);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.donatio-container-two .donatio-center-padd {
   width: 1520px;
   min-width: 800px;
   margin: 0 auto;
-  background: linear-gradient(290deg, #e196b3, rgba(255, 0, 0, 0) 70.71%),
-    linear-gradient(7deg, #93a0c8, rgba(0, 255, 0, 0) 70.71%);
 }
 
 .donatio-container-two,
