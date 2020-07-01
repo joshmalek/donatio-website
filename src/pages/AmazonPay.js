@@ -80,7 +80,20 @@ const AmazonPayReturn = () => {
 const AmazonPayInit = () => {
   const [buttonLoaded, setButtonLoaded] = useState(false);
 
+  const [donationPrice, setDonationPrice] = useState(0);
+  const [charityName, setCharityName] = useState("");
+
   useEffect(() => {
+    // Parse URL Params for the donation price and charity name
+    let parsed_params = QueryString.parse(window.location.search);
+    if (parsed_params.amount && parsed_params.npo_name) {
+      setCharityName(parsed_params.npo_name);
+      setDonationPrice(parseInt(parsed_params.amount).toFixed(2));
+    } else {
+      // if the required parameters are not present, just exit the tab.
+      window.close();
+    }
+
     // Setup Amazon Pay.
     setTimeout(() => {
       if (!buttonLoaded) {
@@ -93,8 +106,8 @@ const AmazonPayInit = () => {
   return (
     <div>
       <div className="donate-prompt-pay">
-        Donate <span style={{ color: "#52ECBD" }}>$12.21</span> to Nonprofit
-        Name Here?
+        Donate <span style={{ color: "#52ECBD" }}>${donationPrice}</span> to{" "}
+        {charityName}?
       </div>
       <div
         id="AmazonPayButton"
