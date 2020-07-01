@@ -13,7 +13,7 @@ const AmazonPayReturn = () => {
     console.log(donation_amount);
     console.log(typeof donation_amount);
     let query_string = `mutation { processAmazonPay( donation_amount: "${donation_amount}", currency_code: "USD", order_reference_id: "${orderId}" ) { success, reciept_id } }`;
-    localStorage.removeItem("donation_amount");
+    // localStorage.removeItem("donation_amount");
 
     window.placeAmazonPayOrder(orderId, (confirmationFlow) => {
       axios
