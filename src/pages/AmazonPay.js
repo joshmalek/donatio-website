@@ -8,7 +8,7 @@ const AmazonPayReturn = () => {
   const [addressBookLoaded, setAddressBookLoaded] = useState(false);
 
   const completeOrder = () => {
-    let query_string = `mutation { processAmazonPay( donation_amount: ${10.0}, currency_code: "USD", order_reference_id: "${orderId}" ) { total_donation } }`;
+    let query_string = `mutation { processAmazonPay( donation_amount: ${10.0}, currency_code: "USD", order_reference_id: "${orderId}" ) { success, reciept_id } }`;
 
     window.placeAmazonPayOrder(orderId, (confirmationFlow) => {
       axios
