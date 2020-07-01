@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import AmazonPayConfirmation from "./pages/AmazonPayConfirmation";
+import TemplateContainer2 from "./components/TemplateContainer2";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { AmazonPayInit, AmazonPayReturn } from "./pages/AmazonPay";
 import { TwitterAuthCallback, TwitterAuth } from "./components/TwitterAuth";
@@ -22,25 +23,37 @@ const DonatioApp = () => {
       <div>
         <Switch>
           <Route path="/twitterAuth">
-            <TwitterAuth />
+            <TemplateContainer2>
+              <TwitterAuth />
+            </TemplateContainer2>
           </Route>
           <Route path="/twitter">
-            <TwitterAuthCallback />
+            <TemplateContainer2>
+              <TwitterAuthCallback />
+            </TemplateContainer2>
           </Route>
           <Route path="/privacy">
             <PrivacyPolicy />
           </Route>
           <Route path="/contact">
-            <Contact />
+            <TemplateContainer2>
+              <Contact />
+            </TemplateContainer2>
           </Route>
           <Route path="/amazonPay">
-            <AmazonPayInit />
+            <TemplateContainer2>
+              <AmazonPayInit />
+            </TemplateContainer2>
           </Route>
           <Route path="/amazonPayReturn">
-            <AmazonPayReturn />
+            <TemplateContainer2>
+              <AmazonPayReturn />
+            </TemplateContainer2>
           </Route>
           <Route path="/paymentStatus">
-            <AmazonPayConfirmation />
+            <TemplateContainer2>
+              <AmazonPayConfirmation />
+            </TemplateContainer2>
           </Route>
           <Route path="/">
             <App />

@@ -56,3 +56,66 @@
   transform: skew(40deg, 0deg);
   color: white;
 }
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: Yan;
+  src: url(../fonts/Yantramanav/Yantramanav-Regular.ttf);
+}
+
+@font-face {
+  font-family: Yan;
+  src: url(../fonts/Yantramanav/Yantramanav-Medium.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Yan;
+  src: url(../fonts/Yantramanav/Yantramanav-Bold.ttf);
+  font-weight: bold;
+}
+
+/* Donatio Style! */
+
+.donatio-container-two {
+  width: 1520px;
+  min-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(290deg, #e196b3, rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(7deg, #93a0c8, rgba(0, 255, 0, 0) 70.71%);
+}
+
+.donatio-container-two,
+.donatio-container {
+  font-family: OpenSans;
+}
+
+.donatio-container-two .body-contents {
+  margin-top: 30px;
+}
+
+.donatio-navbar {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.donatio-navbar .navbar-left,
+.donatio-navbar .navbar-right {
+  flex-grow: 1;
+}
+
+.donatio-navbar .navbar-left .logo-box,
+.donatio-navbar .navbar-left .logo-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.donatio-navbar .navbar-left .logo-text {
+  font-family: Yan;
+  font-weight: 600;
+}
