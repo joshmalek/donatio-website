@@ -8,7 +8,9 @@ const AmazonPayReturn = () => {
   const [addressBookLoaded, setAddressBookLoaded] = useState(false);
 
   const completeOrder = () => {
-    let query_string = `mutation { processAmazonPay( donation_amount: ${10.0}, currency_code: "USD", order_reference_id: "${orderId}" ) { success, reciept_id } }`;
+    let donation_amount = localStorage.getItem("donation_amount");
+    let query_string = `mutation { processAmazonPay( donation_amount: ${donation_amount}, currency_code: "USD", order_reference_id: "${orderId}" ) { success, reciept_id } }`;
+    localStorage.removeItem("donation_amount");
 
     window.placeAmazonPayOrder(orderId, (confirmationFlow) => {
       axios
@@ -91,6 +93,10 @@ const AmazonPayInit = () => {
       setCharityName(parsed_params.npo_name);
       setDonationPrice(parseFloat(parsed_params.amount).toFixed(2));
       // setDonationPrice(parsed_params.amount.toFixed(2));
+      localStorage.setItem(
+        "donation_amount",
+        parseFloat(parsed_params.amount).toFixed(2)
+      );
     } else {
       // if the required parameters are not present, just exit the tab.
       console.log(`Should close tab...`);
