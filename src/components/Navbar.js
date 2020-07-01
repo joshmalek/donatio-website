@@ -12,7 +12,7 @@ const Navbar = ({ logoOnly }) => {
           DONATIO
         </div>
       </div>
-      {!logoOnly & <div className="navbar-right"></div>}
+      {!logoOnly && <div className="navbar-right"></div>}
     </div>
   );
 };
