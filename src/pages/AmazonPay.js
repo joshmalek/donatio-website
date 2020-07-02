@@ -6,14 +6,22 @@ import axios from "axios";
 const AmazonPayReturn = () => {
   const [orderId, setOrderId] = useState(null);
   const [addressBookLoaded, setAddressBookLoaded] = useState(false);
+  const [userInfo, setUserInfo] = useState(null);
 
   const completeOrder = () => {
+    if (userInfo == null) {
+      console.log(`User info is not set...`);
+      return;
+    }
+
     let donation_amount = localStorage.getItem("donation_amount");
     console.log(`Doonation Amount:`);
     console.log(donation_amount);
     let query_string = `mutation { processAmazonPay( donation_amount: ${parseFloat(
       donation_amount
-    )}, currency_code: "USD", order_reference_id: "${orderId}" ) { success, reciept_id } }`;
+    )}, currency_code: "USD", order_reference_id: "${orderId}", user_id: "${
+      userInfo.user_id
+    }" ) { success, reciept_id } }`;
     // localStorage.removeItem("donation_amount");
 
     console.log(`Query String:`);
@@ -67,6 +75,7 @@ const AmazonPayReturn = () => {
       .then((res) => {
         console.log(`User Data Request returned:`);
         console.log(res);
+        setUserInfo(res.data.data.requestAmazonCreds);
         localStorage.setItem(
           "donator_info",
           JSON.stringify(res.data.data.requestAmazonCreds)
