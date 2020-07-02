@@ -59,6 +59,20 @@ const AmazonPayReturn = () => {
       window.location.replace("/");
     }
 
+    // request the user's credentials through the access token
+    axios
+      .post("http://localhost:4000/graphql", {
+        query: `query { requestAmazonCreds(access_token: "${parsed_params.access_token}") { email, name, user_id } }`,
+      })
+      .then((res) => {
+        console.log(`User Data Request returned:`);
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(`Error requesting user data`);
+        console.log(err);
+      });
+
     // call the address book api
     setTimeout(() => {
       if (!addressBookLoaded) {
