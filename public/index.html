@@ -76,6 +76,8 @@
               // Here is where you can grab the Order Reference ID.
               orderReference.getAmazonOrderReferenceId();
               reference_id = orderReference.getAmazonOrderReferenceId();
+
+              if (selectCallback) selectCallback(reference_id);
             },
             onAddressSelect: function (orderReference) {
               // Replace the following code with the action that you want
