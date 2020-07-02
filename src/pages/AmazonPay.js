@@ -62,11 +62,13 @@ const AmazonPayReturn = () => {
     // request the user's credentials through the access token
     axios
       .post("http://localhost:4000/graphql", {
-        query: `query { requestAmazonCreds(access_token: "${parsed_params.access_token}") { email, name, user_id } }`,
+        query: `query { requestAmazonCreds(access_token: "${parsed_params.access_token}") { email, first_name, last_name, user_id } }`,
       })
       .then((res) => {
         console.log(`User Data Request returned:`);
         console.log(res);
+
+        // store the user data retrieved by amazon
       })
       .catch((err) => {
         console.log(`Error requesting user data`);
