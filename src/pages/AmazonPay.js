@@ -67,7 +67,10 @@ const AmazonPayReturn = () => {
       .then((res) => {
         console.log(`User Data Request returned:`);
         console.log(res);
-        localStorage.setItem("donator_info", res.data.data.requestAmazonCreds);
+        localStorage.setItem(
+          "donator_info",
+          JSON.stringify(res.data.data.requestAmazonCreds)
+        );
 
         // store the user data retrieved by amazon
       })
