@@ -167,7 +167,7 @@ export default function EmailConfirm() {
           >
             Account Setup Complete
           </div>
-          <div>
+          <div style={{ marginBottom: "20px" }}>
             You have successfully confirmed your account and set your password.
             Download the Donatio mobile app to continue the Donatio experience!
           </div>
@@ -206,9 +206,13 @@ const PasswordSet = ({ onConfirm, passwords_match }) => {
         Complete your account setup by creating a pasword for your account.
       </div>
       <div className="field-label">New Password</div>
-      <input ref={pwdRef} className="donatio-input-field" />
+      <input type="password" ref={pwdRef} className="donatio-input-field" />
       <div className="field-label">Confirm Password</div>
-      <input ref={pwdConfirmRef} className="donatio-input-field" />
+      <input
+        type="password"
+        ref={pwdConfirmRef}
+        className="donatio-input-field"
+      />
       <div style={{ display: "flex", alignItems: "center" }}>
         <div style={{ color: "red", fontSize: "15px", flexGrow: 1 }}>
           {!passwords_match && "Passwords do not match"}
