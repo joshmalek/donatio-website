@@ -92,6 +92,9 @@ const PasswordSet = ({ onConfirm, passwords_match }) => {
 
   return (
     <div className="password-confirm-center">
+      <div style={{ fontSize: "20px", fontWeight: 600, marginBottom: "20px" }}>
+        Set Your Password
+      </div>
       <div style={{ marginBottom: "15px" }}>
         Complete your account setup by creating a pasword for your account.
       </div>
@@ -123,6 +126,11 @@ const EmailConfirmation = ({ onConfirm, email_invalid }) => {
   return (
     <div className="email-confirm-field">
       <div className="email-confirm-center">
+        <div
+          style={{ fontSize: "20px", fontWeight: 600, marginBottom: "20px" }}
+        >
+          Almost there...
+        </div>
         <div style={{ fontSize: "20px", marginBottom: "20px" }}>
           You're almost done confirming your account! Enter your account email
           below to complete the confirmation.
