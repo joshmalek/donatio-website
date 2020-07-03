@@ -101,17 +101,17 @@ export default function EmailConfirm() {
         .then((res) => {
           console.log(`Password Set responded with:`);
           console.log(res);
+
+          passwordController.start({
+            top: "-20px",
+            opacity: 0,
+            transition: { duration: 1 },
+          });
         })
         .catch((err) => {
           console.log(`Error setting password`);
           console.log(err);
         });
-
-      passwordController.start({
-        top: "-20px",
-        opacity: 0,
-        transition: { duration: 1 },
-      });
     }
   }, [passwordValue]);
 
