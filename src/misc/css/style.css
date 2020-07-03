@@ -148,27 +148,24 @@
 
 /* Email Confirmation Style */
 .email-confirm-field-container {
-  height: 115px;
+  height: 205px;
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
-  margin-top: -57.5px;
+  margin-top: -102.5px;
   z-index: 2;
 }
 
 .password-confirm-field-container {
-  height: 235px;
-  border: 1px solid black;
+  height: 255px;
   position: absolute;
   z-index: 1;
   top: 85%;
   left: 0;
   opacity: 0;
   right: 0;
-  margin-top: -117.5px;
-
-  background-color: green;
+  margin-top: -127.5px;
   font-size: 20px;
 }
 
