@@ -169,6 +169,19 @@
   font-size: 20px;
 }
 
+.email-password-setup-completion {
+  opacity: 0;
+  height: 200px;
+  position: absolute;
+  z-index: 1;
+  top: 85%;
+  left: 0;
+  opacity: 0;
+  right: 0;
+  margin-top: -120px;
+  font-size: 20px;
+}
+
 .password-confirm-center {
   width: 400px;
   margin: 0 auto;

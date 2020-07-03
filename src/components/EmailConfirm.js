@@ -8,6 +8,7 @@ export default function EmailConfirm() {
   const [passwordValue, setPasswordValue] = useState(null);
   const emailController = useAnimation();
   const passwordController = useAnimation();
+  const completionAnimation = useAnimation();
 
   const [trueEmailValue, setTrueEmailValue] = useState(null);
   const [userId, setUserId] = useState(null);
@@ -108,6 +109,11 @@ export default function EmailConfirm() {
               opacity: 0,
               transition: { duration: 1 },
             });
+            completionAnimation.start({
+              top: "50%",
+              opacity: 1,
+              transition: { duration: 1 },
+            });
           }
         })
         .catch((err) => {
@@ -145,6 +151,27 @@ export default function EmailConfirm() {
             }
           }}
         />
+      </motion.div>
+      <motion.div
+        className="email-password-setup-completion"
+        animate={completionAnimation}
+      >
+        <div className="password-confirm-center">
+          <div
+            style={{
+              fontSize: "24px",
+              fontWeight: 600,
+              fontFamily: "Yan",
+              marginBottom: "20px",
+            }}
+          >
+            Account Setup Complete
+          </div>
+          <div>
+            You have successfully confirmed your account and set your password.
+            Download the Donatio mobile app to continue the Donatio experience!
+          </div>
+        </div>
       </motion.div>
     </React.Fragment>
   );
