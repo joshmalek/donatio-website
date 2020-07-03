@@ -171,6 +171,15 @@ export default function EmailConfirm() {
             You have successfully confirmed your account and set your password.
             Download the Donatio mobile app to continue the Donatio experience!
           </div>
+          <div>
+            <ActionButton
+              onclick={() => {
+                // redirect to homepage
+                window.location.replace("/");
+              }}
+              value="Go Home"
+            />
+          </div>
         </div>
       </motion.div>
     </React.Fragment>
