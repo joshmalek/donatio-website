@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useAnimation, motion } from "framer-motion";
 import QueryString from "query-string";
+import axios from "axios";
 
 export default function EmailConfirm() {
   const [emailValue, setEmailValue] = useState(null);
@@ -21,6 +22,24 @@ export default function EmailConfirm() {
     console.log(parsed_params);
     // if there is no confiirmation string, leave the pave.
     // if the api returns null on confirmation string search, also leave the page.
+    if (!parsed_params.confirm_key) {
+      window.location.replace("/");
+    }
+
+    const confirm_query = `checkConfirmation(confirmation_key:"${parsed_params.confirm_key}") {email, _id, confirmation_string, email_confirmed}`;
+
+    axios
+      .post("http://localhost:4000/graphql", {
+        query: confirm_query,
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(`Error recieved while checking confirmation string...`);
+        console.log(err);
+        // TODO redirect from page if an error is recieved.
+      });
 
     setTrueEmailValue("sample@gmail.com");
     setUserId("sample_user_id");
