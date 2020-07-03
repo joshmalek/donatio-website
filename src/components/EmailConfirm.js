@@ -92,7 +92,14 @@ const PasswordSet = ({ onConfirm, passwords_match }) => {
 
   return (
     <div className="password-confirm-center">
-      <div style={{ fontSize: "20px", fontWeight: 600, marginBottom: "20px" }}>
+      <div
+        style={{
+          fontSize: "20px",
+          fontWeight: 600,
+          marginBottom: "20px",
+          fontFamily: "Yan",
+        }}
+      >
         Set Your Password
       </div>
       <div style={{ marginBottom: "15px" }}>
@@ -127,7 +134,12 @@ const EmailConfirmation = ({ onConfirm, email_invalid }) => {
     <div className="email-confirm-field">
       <div className="email-confirm-center">
         <div
-          style={{ fontSize: "20px", fontWeight: 600, marginBottom: "20px" }}
+          style={{
+            fontSize: "20px",
+            fontWeight: 600,
+            marginBottom: "20px",
+            fontFamily: "Yan",
+          }}
         >
           Almost there...
         </div>
