@@ -102,11 +102,13 @@ export default function EmailConfirm() {
           console.log(`Password Set responded with:`);
           console.log(res);
 
-          passwordController.start({
-            top: "-20px",
-            opacity: 0,
-            transition: { duration: 1 },
-          });
+          if (res.data.data.setUserPassword == true) {
+            passwordController.start({
+              top: "-20px",
+              opacity: 0,
+              transition: { duration: 1 },
+            });
+          }
         })
         .catch((err) => {
           console.log(`Error setting password`);
