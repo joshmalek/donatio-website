@@ -24,7 +24,7 @@ const AmazonPayReturn = () => {
       donation_amount
     )}, currency_code: "USD", order_reference_id: "${orderId}", user_id: "${
       userInfo.user_id
-    }" ) { success, reciept_id } }`;
+    }" ) { success, receipt_id } }`;
     // localStorage.removeItem("donation_amount");
 
     console.log(`Query String:`);
@@ -43,7 +43,7 @@ const AmazonPayReturn = () => {
             // set session key
             localStorage.setItem(
               "donation_reciept",
-              res.data.data.processAmazonPay.reciept_id
+              res.data.data.processAmazonPay.receipt_id
             );
 
             confirmationFlow.success();
