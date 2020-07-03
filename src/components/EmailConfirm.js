@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useAnimation, motion } from "framer-motion";
+import QueryString from "query-string";
 
 export default function EmailConfirm() {
   const [emailValue, setEmailValue] = useState(null);
@@ -15,6 +16,11 @@ export default function EmailConfirm() {
     // Query the api to get the actual email value for the user
     // and the user_id. Store them in trueEmailValue and userId
     // respectively
+
+    let parsed_params = QueryString.parse(window.location.search);
+    console.log(parsed_params);
+    // if there is no confiirmation string, leave the pave.
+    // if the api returns null on confirmation string search, also leave the page.
 
     setTrueEmailValue("sample@gmail.com");
     setUserId("sample_user_id");
@@ -110,7 +116,7 @@ const PasswordSet = ({ onConfirm, passwords_match }) => {
       <div className="field-label">Confirm Password</div>
       <input ref={pwdConfirmRef} className="donatio-input-field" />
       <div style={{ display: "flex", alignItems: "center" }}>
-        <div style={{ color: "red", flexGrow: 1 }}>
+        <div style={{ color: "red", fontSize: "15px", flexGrow: 1 }}>
           {!passwords_match && "Passwords do not match"}
         </div>
         <div style={{ textAlign: "right" }}>
@@ -150,7 +156,7 @@ const EmailConfirmation = ({ onConfirm, email_invalid }) => {
         <div className="field-label">Confirm Email</div>
         <input ref={emailRef} className="donatio-input-field" />
         <div style={{ display: "flex", alignItems: "center" }}>
-          <div style={{ flexGrow: 1, color: "red" }}>
+          <div style={{ flexGrow: 1, color: "red", fontSize: "15px" }}>
             {email_invalid && "Invalid Email"}
           </div>
           <div>
