@@ -10,6 +10,7 @@ import { TwitterAuthCallback, TwitterAuth } from "./components/TwitterAuth";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./misc/css/style.css";
+import EmailConfirm from "./components/EmailConfirm";
 
 require("dotenv").config();
 
@@ -53,6 +54,11 @@ const DonatioApp = () => {
           <Route path="/paymentStatus">
             <TemplateContainer2>
               <AmazonPayConfirmation />
+            </TemplateContainer2>
+          </Route>
+          <Route path="/confirm">
+            <TemplateContainer2>
+              <EmailConfirm />
             </TemplateContainer2>
           </Route>
           <Route path="/">
