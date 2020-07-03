@@ -36,15 +36,20 @@ export default function EmailConfirm() {
       })
       .then((res) => {
         console.log(res);
+        let user_data = res.data.data.checkConfirmation;
+
+        if (user_data.email_confirmed) {
+          window.location.replace("/?status=account_already_confirmed");
+        }
+
+        setTrueEmailValue(user_data.email);
+        setUserId(user_data._id);
       })
       .catch((err) => {
         console.log(`Error recieved while checking confirmation string...`);
         console.log(err);
         // TODO redirect from page if an error is recieved.
       });
-
-    setTrueEmailValue("sample@gmail.com");
-    setUserId("sample_user_id");
   }, []);
 
   useEffect(() => {
@@ -54,17 +59,33 @@ export default function EmailConfirm() {
       let email_valid = emailValue === trueEmailValue;
 
       if (email_valid) {
-        // hide the email container.
-        emailController.start({
-          top: "-20px",
-          opacity: 0,
-          transition: { duration: 1 },
-        });
-        passwordController.start({
-          top: "50%",
-          opacity: 1,
-          transition: { duration: 1 },
-        });
+        // call the api and inform that the user has
+        // confirmed their email successfully!
+        const confirm_query = `mutation { setEmailConfirmed (user_id: "${userId}") }`;
+        axios
+          .post("http://localhost:4000/graphql", {
+            query: confirm_query,
+          })
+          .then((res) => {
+            console.log(`Confirm Email Response`);
+            console.log(res);
+
+            // hide the email container.
+            emailController.start({
+              top: "-20px",
+              opacity: 0,
+              transition: { duration: 1 },
+            });
+            passwordController.start({
+              top: "50%",
+              opacity: 1,
+              transition: { duration: 1 },
+            });
+          })
+          .catch((err) => {
+            console.log(`Error setting email as confirmed...`);
+            console.log(err);
+          });
       }
     }
   }, [emailValue]);
