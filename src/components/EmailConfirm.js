@@ -26,7 +26,9 @@ export default function EmailConfirm() {
       window.location.replace("/");
     }
 
-    const confirm_query = `checkConfirmation(confirmation_key:"${parsed_params.confirm_key}") {email, _id, confirmation_string, email_confirmed}`;
+    const confirm_query = `query { checkConfirmation(confirmation_key:"${parsed_params.confirm_key}") {email, _id, confirmation_string, email_confirmed}}`;
+    console.log(`Confirm Query String Value`);
+    console.log(confirm_query);
 
     axios
       .post("http://localhost:4000/graphql", {
