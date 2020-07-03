@@ -93,6 +93,20 @@ export default function EmailConfirm() {
   useEffect(() => {
     if (passwordValue) {
       // set password...
+      const set_password_query = `mutation { setUserPassword(user_id: "${userId}", password: "${passwordValue}") }`;
+      axios
+        .post("http://localhost:4000/graphql", {
+          query: set_password_query,
+        })
+        .then((res) => {
+          console.log(`Password Set responded with:`);
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(`Error setting password`);
+          console.log(err);
+        });
+
       passwordController.start({
         top: "-20px",
         opacity: 0,
