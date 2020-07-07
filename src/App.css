@@ -36,3 +36,248 @@
     transform: rotate(360deg);
   }
 }
+
+/* Landing Page Stuff */
+@font-face {
+  font-family: Asap;
+  src: url(assets/fonts/Asap/Asap-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Asap;
+  src: url(assets/fonts/Asap/Asap-Medium.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(assets/fonts/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(assets/fonts/OpenSans/OpenSans-SemiBold.ttf);
+  font-weight: 600;
+}
+
+.intro-area {
+  background: linear-gradient(135deg, #93a0c8, #f993ac);
+}
+
+.landing-content {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.intro-area .navbar-area {
+  display: flex;
+  padding-top: 30px;
+}
+
+.intro-area .navbar-area .logo-area,
+.intro-area .navbar-area .navbar-actions {
+  flex-grow: 1;
+}
+
+.intro-area .navbar-area .navbar-actions {
+  text-align: right;
+}
+
+.intro-area .navbar-area .logo-area .logo-container {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.intro-area .navbar-area .logo-area .logo-text-container {
+  display: inline-block;
+  height: 40px;
+  vertical-align: middle;
+  font-family: Asap;
+  font-weight: 600;
+  font-size: 24px;
+  color: white;
+  line-height: 40px;
+}
+
+.logo-text-container {
+  display: inline-block;
+  height: 40px;
+  vertical-align: middle;
+  font-family: Asap;
+  font-weight: 600;
+  font-size: 24px;
+  color: white;
+  line-height: 10px;
+}
+
+.parallel-button {
+  background-color: #202020;
+  transform: skew(-30deg, 0deg);
+  display: inline-block;
+  border-radius: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+  min-width: 140px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.parallel-button .parallel-button-text {
+  transform: skew(30deg, 0deg);
+  color: white;
+}
+
+.navbar-actions .navbar-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.intro-area .landing-first-prompt {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.intro-area .landing-first-prompt .left-area,
+.intro-area .landing-first-prompt .right-area {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.intro-area .landing-first-prompt .left-area {
+  width: 630px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.intro-area .landing-first-prompt .right-area {
+  width: 400px;
+  height: 250px;
+  background-color: white;
+  text-align: center;
+}
+
+.landing-title {
+  font-family: Asap;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.landing-paragraph {
+  font-family: OpenSans;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.paragraph-with-pic {
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.paragraph-with-pic .picture-area {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.paragraph-with-pic .paragraph-container {
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.paragraph-text-holder-center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.paragraph-with-pic-icons {
+  margin-top: 30px;
+}
+
+.paragraph-with-pic-icons .icon-container {
+  display: inline-block;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.charity-slider-frame {
+  height: 80px;
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.charity-slider-slider {
+  height: 100%;
+  transform: translate(/*x*/ 0px, /*y*/ 0px);
+  text-align: left;
+}
+
+.charity-holder {
+  height: 80px;
+  display: inline-block;
+  margin-right: 80px;
+}
+
+.charity-holder-first {
+  height: 80px;
+  display: inline-block;
+}
+
+.parallel-title {
+  position: relative;
+  font-family: Asap;
+  font-size: 18px;
+}
+
+.parallel-title .text-area {
+  position: relative;
+  z-index: 2;
+}
+
+.parallel-title .parallel-bg {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 1;
+  background-color: #e2e2e2;
+  width: 130px;
+  height: 30px;
+  transform: skew(-30deg, 0deg);
+  border-radius: 5px;
+}
+
+.landing-footer {
+  height: 150px;
+  background: linear-gradient(135deg, #93a0c8, #f993ac);
+}
+
+.landing-footer .footer-holder {
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
+
+.landing-footer .footer-holder .left-side,
+.landing-footer .footer-holder .right-side {
+  flex-grow: 1;
+  height: 40px;
+}
+
+.landing-footer .footer-holder .right-side {
+  text-align: right;
+}

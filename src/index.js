@@ -11,6 +11,7 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./misc/css/style.css";
 import EmailConfirm from "./components/EmailConfirm";
+import LandingPage from "./components/landing_page/LandingPage";
 
 require("dotenv").config();
 
@@ -62,7 +63,7 @@ const DonatioApp = () => {
             </TemplateContainer2>
           </Route>
           <Route path="/">
-            <App />
+            <LandingPage />
           </Route>
         </Switch>
       </div>
