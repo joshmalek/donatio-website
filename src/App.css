@@ -213,6 +213,10 @@
   margin-right: 20px;
 }
 
+.charity-slider {
+  padding-top: 100px;
+}
+
 .charity-slider-frame {
   height: 80px;
   width: 100%;
@@ -280,4 +284,32 @@
 
 .landing-footer .footer-holder .right-side {
   text-align: right;
+}
+
+.display-modals {
+  display: flex;
+  height: 500px;
+  align-items: center;
+}
+
+.display-modals-section {
+  flex-grow: 1;
+}
+
+.display-modals-section .modals-section-center {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.trophies-climb-leader {
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+.modal-tranitioned {
+  margin-top: 100px;
+  opacity: 0;
+  position: relative;
 }

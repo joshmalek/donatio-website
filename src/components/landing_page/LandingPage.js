@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import TrackVisibility from "react-on-screen";
 import "../../App.css";
 
 import Logo from "../../assets/svg/logo.svg";
@@ -12,6 +13,10 @@ import SalvationArmy from "../../assets/nonprofit_logos/salvation-army.png";
 import StJude from "../../assets/nonprofit_logos/st-jude.png";
 import Unicef from "../../assets/nonprofit_logos/unicef.png";
 import UnitedWay from "../../assets/nonprofit_logos/united-way.png";
+
+import EarnMedalsSVG from "../../assets/svg/earn_medals.svg";
+import ClimbLeaderboardSVG from "../../assets/svg/trophies.svg";
+import GainExperienceSVG from "../../assets/svg/experience_bar.svg";
 
 const ParallelButton = ({ text, onclick, bgColor, textColor, marginRight }) => {
   return (
@@ -275,7 +280,7 @@ const GettingStarted = () => {
       <div className="landing-title">Getting Started</div>
       <div style={{ marginLeft: "30px", marginTop: "30px" }}>
         <ParallelTitle title="Download the Extension" />
-        <div className="landing-paragraph">
+        <div className="landing-paragraph" style={{ marginBottom: "70px" }}>
           Download the extension here and add it to your browser. The extension
           currently supports only Google Chrome. Firefox extension will be
           coming soon.
@@ -320,6 +325,127 @@ const Footer = () => {
   );
 };
 
+const DisplayModals = () => {
+  const earnMedalsAnimator = useAnimation();
+  const gainLevelsAnimtor = useAnimation();
+  const climbLeaderboardAnimator = useAnimation();
+
+  return (
+    <div className="display-modals">
+      <div className="display-modals-section">
+        <div className="modals-section-center">
+          <TrackVisibility>
+            {({ isVisible }) =>
+              isVisible && (
+                <motion.div
+                  className="modal-tranitioned"
+                  animate={earnMedalsAnimator}
+                >
+                  <div
+                    onLoad={() => {
+                      earnMedalsAnimator.start({
+                        marginTop: "0px",
+                        opacity: 1,
+                        transition: { duration: 1.5 },
+                      });
+                    }}
+                    style={{
+                      width: "62.13px",
+                      height: "78.05px",
+                      marginBottom: "30px",
+                    }}
+                  >
+                    <img src={EarnMedalsSVG} width="100%" height="100%" />
+                  </div>
+                  <ParallelTitle title="Earn Medals" />
+                  <div className="landing-paragraph">
+                    Each time you donate to a charity, you gain progress to
+                    unlocking different medals to add to your collection.
+                  </div>
+                </motion.div>
+              )
+            }
+          </TrackVisibility>
+        </div>
+      </div>
+      <div className="display-modals-section">
+        <div className="modals-section-center">
+          <TrackVisibility>
+            {({ isVisible }) =>
+              isVisible && (
+                <motion.div
+                  className="modal-tranitioned"
+                  animate={gainLevelsAnimtor}
+                  onLoad={() => {
+                    setTimeout(() => {
+                      gainLevelsAnimtor.start({
+                        marginTop: "0px",
+                        opacity: 1,
+                        transition: { duration: 1.5 },
+                      });
+                    }, 500);
+                  }}
+                >
+                  <ParallelTitle title="Gain Levels" />
+                  <div className="landing-paragraph">
+                    You will gain experience for each donation you make and gain
+                    levels once enough experience has been acquired.
+                  </div>
+                  <div
+                    style={{
+                      width: "232.24px",
+                      height: "40.67px",
+                      marginTop: "50px",
+                    }}
+                  >
+                    <img src={GainExperienceSVG} width="100%" height="100%" />
+                  </div>
+                </motion.div>
+              )
+            }
+          </TrackVisibility>
+        </div>
+      </div>
+      <div className="display-modals-section">
+        <div className="modals-section-center">
+          <TrackVisibility>
+            {({ isVisible }) =>
+              isVisible && (
+                <motion.div
+                  className="modal-tranitioned"
+                  animate={climbLeaderboardAnimator}
+                  onLoad={() => {
+                    setTimeout(() => {
+                      climbLeaderboardAnimator.start({
+                        marginTop: "0px",
+                        opacity: 1,
+                        transition: { duration: 1.5 },
+                      });
+                    }, 1000);
+                  }}
+                >
+                  <div
+                    style={{ width: "76px", height: "76.5px" }}
+                    className="trophies-climb-leader"
+                  >
+                    <img src={ClimbLeaderboardSVG} width="100%" height="100%" />
+                  </div>
+                  <ParallelTitle title="Climb the Leaderboard" />
+                  <div className="landing-paragraph">
+                    Rank on a global leaderboard amongst all donators on the
+                    platform. Increase your rank score for each achievement you
+                    acquire and level you gain.
+                  </div>
+                </motion.div>
+              )
+            }
+          </TrackVisibility>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function LandingPage() {
   return (
     <div>
@@ -334,9 +460,7 @@ function LandingPage() {
           accolades, points and levels for each donation they make!"
           imageLocation="left"
         />
-        <div style={{ height: "570px", backgroundColor: "red" }}>
-          PLACEHOLDER
-        </div>
+        <DisplayModals />
         <ParagraphWithPicture
           image="https://via.placeholder.com/760x476"
           imageWidth="760px"
@@ -371,7 +495,7 @@ function LandingPage() {
             [UnitedWay, 344],
           ]}
         />
-        <div style={{ marginTop: "140px", marginBottom: "140px" }}>
+        <div style={{ marginTop: "200px", marginBottom: "200px" }}>
           <GettingStarted />
         </div>
       </div>

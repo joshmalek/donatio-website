@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="76.5" viewBox="0 0 76 76.5">
+  <g id="Page-1" transform="translate(-0.5)">
+    <g id="_018---Competition" data-name="018---Competition">
+      <g id="Group_14" data-name="Group 14" transform="translate(5.276 32.974)">
+        <path id="Shape" d="M25.1,44.276H17.19V39H14.552v5.276H6.638A2.638,2.638,0,0,0,4,46.914V52.19H6.638V46.914H25.1V52.19h2.638V46.914A2.638,2.638,0,0,0,25.1,44.276Z" transform="translate(-4 -20.534)" fill="#3d324c"/>
+        <path id="Shape-2" data-name="Shape" d="M12,27.638v5.276h2.638V27.638H30.466V25H14.638A2.638,2.638,0,0,0,12,27.638Z" transform="translate(-1.448 -25)" fill="#3d324c"/>
+        <path id="Shape-3" data-name="Shape" d="M57.1,44.276H49.19V39H46.552v5.276H38.638A2.638,2.638,0,0,0,36,46.914V52.19h2.638V46.914H57.1V52.19h2.638V46.914A2.638,2.638,0,0,0,57.1,44.276Z" transform="translate(6.207 -20.534)" fill="#3d324c"/>
+        <path id="Shape-4" data-name="Shape" d="M47.828,32.914h2.638V27.638A2.638,2.638,0,0,0,47.828,25H32v2.638H47.828Z" transform="translate(4.931 -25)" fill="#3d324c"/>
+      </g>
+      <path id="Shape-5" data-name="Shape" d="M23.222,16.828a7.229,7.229,0,0,1-4.3-1.347c-3.7-2.645-4.67-8.432-4.917-11.648A2.623,2.623,0,0,1,14.7,1.855,2.67,2.67,0,0,1,16.651,1h6.582V3.638H16.651c.158,2.208.872,7.6,3.807,9.692a5.319,5.319,0,0,0,4.66.594l.659,2.554a10.166,10.166,0,0,1-2.555.351Z" transform="translate(4.466 0.319)" fill="#f29c1f"/>
+      <path id="Shape-6" data-name="Shape" d="M37.442,16.828a9.611,9.611,0,0,1-1.794-.175l.491-2.594a5.012,5.012,0,0,0,4.2-.824c2.829-2.167,3.522-7.439,3.693-9.6l-6.6.009V1h6.582a2.67,2.67,0,0,1,1.955.852,2.625,2.625,0,0,1,.688,1.978c-.24,3.129-1.174,8.784-4.715,11.5a7.213,7.213,0,0,1-4.5,1.5Z" transform="translate(11.37 0.319)" fill="#f29c1f"/>
+      <path id="Rectangle-path" d="M27,17h5.276v7.967H27Z" transform="translate(8.612 5.422)" fill="#f29c1f"/>
+      <path id="Shape-7" data-name="Shape" d="M43.741,1.319V13.19A10.552,10.552,0,0,1,33.19,23.741H30.552A10.573,10.573,0,0,1,20,13.19V1.319A1.319,1.319,0,0,1,21.319,0h21.1A1.319,1.319,0,0,1,43.741,1.319Z" transform="translate(6.379)" fill="#f0c419"/>
+      <path id="Shape-8" data-name="Shape" d="M22.625,20.141A10.479,10.479,0,0,1,20,13.19V1.319A1.319,1.319,0,0,1,21.319,0h14.9c1.108,17.344-8.085,20.061-13.6,20.141Z" transform="translate(6.379)" fill="#f3d55b"/>
+      <path id="Shape-9" data-name="Shape" d="M29.595,22h2.638a6.6,6.6,0,0,1,6.595,6.595,1.319,1.319,0,0,1-1.319,1.319H24.319A1.319,1.319,0,0,1,23,28.595,6.6,6.6,0,0,1,29.595,22Z" transform="translate(7.336 7.017)" fill="#f0c419"/>
+      <path id="Shape-10" data-name="Shape" d="M25.638,5.638H24.319a1.319,1.319,0,1,1,0-2.638h1.319a1.319,1.319,0,1,1,0,2.638Z" transform="translate(7.336 0.957)" fill="#ecf0f1"/>
+      <path id="Shape-11" data-name="Shape" d="M35.914,5.638H29.319a1.319,1.319,0,1,1,0-2.638h6.595a1.319,1.319,0,1,1,0,2.638Z" transform="translate(8.931 0.957)" fill="#ecf0f1"/>
+      <rect id="Rectangle-path-2" data-name="Rectangle-path" width="13" height="13" rx="1" transform="translate(0.5 63.5)" fill="#5d4c72"/>
+      <rect id="Rectangle-path-3" data-name="Rectangle-path" width="13" height="13" rx="1" transform="translate(10.5 39.5)" fill="#7d6599"/>
+      <rect id="Rectangle-path-4" data-name="Rectangle-path" width="13" height="13" rx="1" transform="translate(21.5 63.5)" fill="#5d4c72"/>
+      <rect id="Rectangle-path-5" data-name="Rectangle-path" width="13" height="13" rx="1" transform="translate(76.5 76.5) rotate(180)" fill="#df4d60"/>
+      <rect id="Rectangle-path-6" data-name="Rectangle-path" width="13" height="13" rx="1" transform="translate(65.5 52.5) rotate(180)" fill="#ff5364"/>
+      <rect id="Rectangle-path-7" data-name="Rectangle-path" width="13" height="13" rx="1" transform="translate(55.5 76.5) rotate(180)" fill="#df4d60"/>
+    </g>
+  </g>
+</svg>
