@@ -16,7 +16,7 @@ This repo consists of the website of our product.
 
 
 ## Installation
-Check out our live site [here](donatio-site.herokuapp.com)!
+Check out our live site [here](https://donatio-site.herokuapp.com/)!
 
 [Twitter handle]: https://img.shields.io/twitter/follow/donatioapp?label=Follow&style=social
 [Twitter badge]: https://twitter.com/intent/follow?screen_name=donatioapp
