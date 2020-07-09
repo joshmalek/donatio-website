@@ -118,7 +118,7 @@ const AmazonPayReturn = () => {
           }
         }}
       >
-        <div className="btn-text">Place Order</div>
+        <div className="btn-text">Complete Donation</div>
       </div>
     </div>
   );
