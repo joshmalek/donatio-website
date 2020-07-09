@@ -32,7 +32,7 @@ const AmazonPayReturn = () => {
 
     window.placeAmazonPayOrder(orderId, (confirmationFlow) => {
       axios
-        .post("http://localhost:4000/graphql", {
+        .post(process.env.REACT_APP_API_ROUTE, {
           query: query_string,
         })
         .then((res) => {
@@ -72,7 +72,7 @@ const AmazonPayReturn = () => {
 
     // request the user's credentials through the access token
     axios
-      .post("http://localhost:4000/graphql", {
+      .post(process.env.REACT_APP_API_ROUTE, {
         query: `query { requestAmazonCreds(access_token: "${parsed_params.access_token}") { email, first_name, last_name, user_id } }`,
       })
       .then((res) => {
