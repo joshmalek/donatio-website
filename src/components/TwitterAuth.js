@@ -15,7 +15,7 @@ const TwitterAuthCallback = () => {
     }
 
     axios
-      .post("http://localhost:4000/graphql", {
+      .post(process.env.REACT_APP_API_ROUTE, {
         query: `query { processTwitterAuth (oauth_token: "${parsed_params.oauth_token}", oauth_verifier: "${parsed_params.oauth_verifier}") }`,
       })
       .then((res) => {

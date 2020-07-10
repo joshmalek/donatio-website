@@ -32,7 +32,7 @@ export default function EmailConfirm() {
     console.log(confirm_query);
 
     axios
-      .post("http://localhost:4000/graphql", {
+      .post(process.env.REACT_APP_API_ROUTE, {
         query: confirm_query,
       })
       .then((res) => {
@@ -64,7 +64,7 @@ export default function EmailConfirm() {
         // confirmed their email successfully!
         const confirm_query = `mutation { setEmailConfirmed (user_id: "${userId}") }`;
         axios
-          .post("http://localhost:4000/graphql", {
+          .post(process.env.REACT_APP_API_ROUTE, {
             query: confirm_query,
           })
           .then((res) => {
@@ -96,7 +96,7 @@ export default function EmailConfirm() {
       // set password...
       const set_password_query = `mutation { setUserPassword(user_id: "${userId}", password: "${passwordValue}") }`;
       axios
-        .post("http://localhost:4000/graphql", {
+        .post(process.env.REACT_APP_API_ROUTE, {
           query: set_password_query,
         })
         .then((res) => {
