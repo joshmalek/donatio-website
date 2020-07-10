@@ -10,7 +10,11 @@ Website for Donatio built with Flutter. Check out our live site [here](https://d
 An AWSRaiseUp project by [Abdul-Muiz Yusuff](https://github.com/sacrael) & [Josh Malek](https://github.com/joshmalek)
 
 ## Features
-* 
+* Interactive Adobe XD Prototype app built right into the page.  Try out the design of our app without having to download it! 
+* Adaptive widget displays the current Nonprofit of the Day.  See who Donatio is supporting at any time.
+* Animated collection of nonprofits that Donatio is currently supporting in rotation.
+* A comprehensive overview of the Donatio platform, and instructions for how to get involved.
+* Full routes built to support our extension, and provide a domain for Amazon Pay hosting.
 ## Documentation 
 This repo consists of the website of our product.  
 
