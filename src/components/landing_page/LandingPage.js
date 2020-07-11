@@ -99,8 +99,19 @@ const ParagraphWithPicture = ({
   imageHeight,
   icons,
   imageLocation,
+  iframe,
 }) => {
   const ImageContainer = () => {
+    if (iframe != null) {
+      return (
+        <div
+          className="picture-area"
+          style={{ width: `${imageWidth}px`, height: `${imageHeight}px` }}
+        >
+          {iframe}
+        </div>
+      );
+    }
     return (
       <div
         className="picture-area"
@@ -474,8 +485,8 @@ function LandingPage() {
         />
         <ParagraphWithPicture
           image="https://via.placeholder.com/377x656"
-          imageWidth="377px"
-          imageHeight="656px"
+          imageWidth="375px"
+          imageHeight="812px"
           header="Donatio Mobile App"
           paragraph="And with out mobile app, keep track of your donations, your
           unlocked medals, and your rankings on the globoal leaderboard.
@@ -483,6 +494,15 @@ function LandingPage() {
           Join in on this truly interactive experience and support charities in
           serving their mission."
           imageLocation="right"
+          iframe={
+            <iframe
+              width="375"
+              height="812"
+              src="https://xd.adobe.com/embed/54c7f3d4-f966-4d98-6c90-c282a1441c5f-22f6/"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          }
         />
         <CharitySlider
           charities={[
