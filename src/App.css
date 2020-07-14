@@ -81,6 +81,12 @@
 }
 
 .intro-area .navbar-area .navbar-actions {
+  color: white;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.intro-area .navbar-area .navbar-actions {
   text-align: right;
 }
 
