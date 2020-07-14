@@ -475,9 +475,9 @@ function LandingPage() {
         />
         <DisplayModals />
         <ParagraphWithPicture
-          image="https://via.placeholder.com/760x476"
-          imageWidth="760px"
-          imageHeight="476px"
+          image="https://via.placeholder.com/480x270"
+          imageWidth="480px"
+          imageHeight="270px"
           header="Donatio Web Extension"
           paragraph="With out web extension, and leveraging the power of
           Amazon Pay, you can donate a percent of your purchases
