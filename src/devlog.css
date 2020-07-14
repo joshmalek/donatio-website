@@ -1,0 +1,48 @@
+.dev-log-navbar {
+  margin-top: 30px;
+  display: flex;
+  font-family: Asap;
+  font-size: 20px;
+  height: 30px;
+}
+
+.devlog-container {
+  width: 700px;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+.dev-log-logo-area {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+}
+
+.devlog-subheader {
+  font-family: OpenSans;
+  font-size: 14px;
+  color: #1155cc;
+  margin-top: 45px;
+  margin-bottom: 15px;
+}
+
+.devlog-paragraph {
+  font-family: OpenSans;
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+.about-the-devs {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.subtle-link {
+  color: #1155cc;
+  text-decoration: none;
+}

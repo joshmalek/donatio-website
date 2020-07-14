@@ -59,6 +59,9 @@ const IntroArea = () => {
             <a href="#" className="navbar-link">
               How It Works
             </a>
+            <a href="/devlog" className="navbar-link">
+              Dev Log
+            </a>
             <ParallelButton text="Try It" />
           </div>
         </div>

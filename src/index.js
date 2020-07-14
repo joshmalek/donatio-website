@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./misc/css/style.css";
 import EmailConfirm from "./components/EmailConfirm";
 import LandingPage from "./components/landing_page/LandingPage";
+import DevLog from "./components/DevLog";
 
 require("dotenv").config();
 
@@ -24,6 +25,9 @@ const DonatioApp = () => {
     <Router>
       <div>
         <Switch>
+          <Route path="/devlog">
+            <DevLog />
+          </Route>
           <Route path="/twitterAuth">
             <TemplateContainer2>
               <TwitterAuth />
