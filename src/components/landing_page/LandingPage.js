@@ -64,7 +64,10 @@ const IntroArea = () => {
         </div>
 
         <div className="landing-first-prompt">
-          <div className="left-area" style={{ paddingTop: "60px" }}>
+          <div
+            className="left-area"
+            style={{ paddingTop: "100px", paddingBottom: "40px" }}
+          >
             <div style={{ maxWidth: "600px" }}>
               <div className="landing-title">
                 Aid Charities Around the World
