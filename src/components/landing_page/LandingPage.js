@@ -55,7 +55,7 @@ const IntroArea = () => {
               <div className="logo-text-container">DONATIO</div>
             </a>
           </div>
-          <div className="navbar-actions">
+          <div classNa me="navbar-actions">
             <a href="#" className="navbar-link">
               How It Works
             </a>
@@ -319,7 +319,6 @@ const Footer = () => {
               width: "40px",
               height: "40px",
               marginRight: "30px",
-              marginLeft: "30px",
               display: "inline-block",
             }}
           >

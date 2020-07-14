@@ -66,8 +66,8 @@
 }
 
 .landing-content {
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
 .intro-area .navbar-area {
@@ -89,7 +89,6 @@
   width: 40px;
   height: 40px;
   vertical-align: middle;
-  margin-left: 30px;
   margin-right: 30px;
 }
 
@@ -142,7 +141,6 @@
 }
 
 .intro-area .landing-first-prompt {
-  margin-left: 100px;
   display: flex;
   flex-direction: row;
 }
