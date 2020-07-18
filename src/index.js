@@ -13,6 +13,7 @@ import "./misc/css/style.css";
 import EmailConfirm from "./components/EmailConfirm";
 import LandingPage from "./components/landing_page/LandingPage";
 import DevLog from "./components/DevLog";
+import Features from "./components/Features"
 
 require("dotenv").config();
 
@@ -27,6 +28,9 @@ const DonatioApp = () => {
         <Switch>
           <Route path="/devlog">
             <DevLog />
+          </Route>
+          <Route path="/features">
+            <Features />
           </Route>
           <Route path="/twitterAuth">
             <TemplateContainer2>

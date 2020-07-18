@@ -6,6 +6,21 @@
   height: 30px;
 }
 
+.dev-log-navbar .left-side {
+}
+
+.dev-log-navbar .right-side {
+  flex-grow: 1;
+  text-align: right;
+  color: #1155cc;
+  line-height: 30px;
+}
+
+.dev-log-navbar .right-side a{
+  color: #1155cc;
+  text-decoration: none;
+}
+
 .devlog-container {
   width: 700px;
   min-width: 400px;
@@ -45,4 +60,41 @@
 .subtle-link {
   color: #1155cc;
   text-decoration: none;
+}
+
+.devlog-image-paragraph {
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.devlog-image-paragraph .left-side {
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.devlog-image-paragraph .left-side,
+.devlog-image-paragraph .right-side {
+  align-items: flex-start;
+}
+
+.devlog-image-paragraph .right-side {
+  max-width: 80%;
+  box-sizing: border-box;
+  margin: 0px 0px 30px 0px;
+  font-size: 14px;
+}
+
+.devlog-image-paragraph .left-side .image-center-div {
+}
+
+.devlog-subcontent-container {
+  margin-bottom: 100px;
+  font-size: 14px;
+}
+
+.devlog-image-paragraph .devlog-title {
+  font-family: Asap;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 20px;
 }

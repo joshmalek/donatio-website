@@ -166,8 +166,9 @@
 .intro-area .landing-first-prompt .right-area {
   width: 400px;
   height: 250px;
-  background-color: white;
   text-align: center;
+  position: relative;
+  top: 45px;
 }
 
 .landing-title {
@@ -195,6 +196,8 @@
 .paragraph-with-pic .picture-area {
   flex-shrink: 0;
   flex-grow: 0;
+  background-repeat: none;
+  background-size: 100%;
 }
 
 .paragraph-with-pic .paragraph-container {

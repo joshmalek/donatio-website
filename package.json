@@ -20,6 +20,7 @@
     "react-on-screen": "^2.1.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-scroll": "^1.8.0",
     "serve": "^11.3.0",
     "twitter-lite": "^0.14.0"
   },

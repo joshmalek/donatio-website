@@ -7,17 +7,22 @@ import "../devlog.css";
 const DevlogNavbar = () => {
   return (
     <div className="dev-log-navbar">
-      <a href="/">
-        <div
-          className="dev-log-logo-area"
-          style={{
-            background: `url(${Logo})`,
-          }}
-        ></div>
-      </a>
-      <div style={{ lineHeight: "30px", marginLeft: "10px" }}>
-        Donatio / Development Log
+      <div className="left-side">
+        <a href="/">
+          <div
+            className="dev-log-logo-area"
+            style={{
+              background: `url(${Logo})`,
+              display: "inline-block",
+              verticalAlign: "top"
+            }}
+          ></div>
+        </a>
+        <div style={{ display: "inline-block", verticalAlign: "top", lineHeight: "30px", marginLeft: "10px" }}>
+          Donatio / Development Log
+        </div>
       </div>
+      <div className="right-side"><a href="/features">Next: Features</a></div>
     </div>
   );
 };

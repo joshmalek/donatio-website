@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import TrackVisibility from "react-on-screen";
+import * as Scroll from "react-scroll"
 import "../../App.css";
 
 import Logo from "../../assets/svg/logo.svg";
@@ -17,6 +18,9 @@ import UnitedWay from "../../assets/nonprofit_logos/united-way.png";
 import EarnMedalsSVG from "../../assets/svg/earn_medals.svg";
 import ClimbLeaderboardSVG from "../../assets/svg/trophies.svg";
 import GainExperienceSVG from "../../assets/svg/experience_bar.svg";
+import TrophyPNG from "../../misc/imgs/trophy-small.png"
+import TrophySVG from "../../misc/svg/award.svg"
+import SupportSVG from "../../misc/svg/support.svg"
 
 const ParallelButton = ({ text, onclick, bgColor, textColor, marginRight }) => {
   return (
@@ -56,13 +60,17 @@ const IntroArea = () => {
             </a>
           </div>
           <div classNa me="navbar-actions">
-            <a href="#" className="navbar-link">
+            <a className="navbar-link" style={{cursor: "pointer"}} onClick={() => {
+              Scroll.animateScroll.scrollTo(1800);
+            }}>
               How It Works
             </a>
             <a href="/devlog" className="navbar-link">
               Dev Log
             </a>
-            <ParallelButton text="Try It" />
+            <ParallelButton text="Try It" onclick={() => {
+              Scroll.animateScroll.scrollToBottom();
+            }} />
           </div>
         </div>
 
@@ -86,11 +94,15 @@ const IntroArea = () => {
                   marginBottom: "60px",
                 }}
               >
-                <ParallelButton text="Try It" />
+                <ParallelButton text="Try It" onclick={() => {
+              Scroll.animateScroll.scrollToBottom();
+            }}/>
               </div>
             </div>
           </div>
-          <div className="right-area">IMAGE GOES HERE</div>
+          <div className="right-area">
+            <img src={SupportSVG} width="100%" />
+          </div>
         </div>
       </div>
     </div>
@@ -121,9 +133,9 @@ const ParagraphWithPicture = ({
     return (
       <div
         className="picture-area"
-        style={{ width: `${imageWidth}px`, height: `${imageHeight}px` }}
+        style={{ width: `${imageWidth}px`, height: `${imageHeight}px`, background: `url(${image})` }}
       >
-        <img src={image} width="100%" height="100%" />
+        {/* <img src={image} width="100%" height="100%" /> */}
       </div>
     );
   };
@@ -334,6 +346,9 @@ const Footer = () => {
             text="Back to Top"
             bgColor="white"
             textColor="#202020"
+            onclick={() => {
+              Scroll.animateScroll.scrollToTop();
+            }}
           />
         </div>
       </div>
@@ -468,9 +483,9 @@ function LandingPage() {
       <IntroArea />
       <div className="landing-content">
         <ParagraphWithPicture
-          image="https://via.placeholder.com/442x316"
-          imageWidth="442px"
-          imageHeight="316px"
+          image={TrophySVG}
+          imageWidth="332"
+          imageHeight="596"
           header="Gamified Donation Platform"
           paragraph="Donatio provides a platform by which users can acquire 
           accolades, points and levels for each donation they make!"
@@ -478,7 +493,7 @@ function LandingPage() {
         />
         <DisplayModals />
         <ParagraphWithPicture
-          image="https://via.placeholder.com/480x270"
+          iframe={<iframe width="480" height="270" src="https://www.youtube.com/embed/3AH7IBOZYLM?rel=0&modestbranding=1&controls=0&autoplay=1&mute=1&loop=1&playlist=3AH7IBOZYLM&autohide=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>}
           imageWidth="480px"
           imageHeight="270px"
           header="Donatio Web Extension"
