@@ -493,11 +493,11 @@ function LandingPage() {
         />
         <DisplayModals />
         <ParagraphWithPicture
-          iframe={<iframe width="480" height="270" src="https://www.youtube.com/embed/3AH7IBOZYLM?rel=0&modestbranding=1&controls=0&autoplay=1&mute=1&loop=1&playlist=3AH7IBOZYLM&autohide=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>}
-          imageWidth="480px"
-          imageHeight="270px"
+          iframe={<iframe width="720" height="405" src="https://www.youtube.com/embed/3AH7IBOZYLM?rel=0&modestbranding=1&controls=0&autoplay=1&mute=1&loop=1&playlist=3AH7IBOZYLM&autohide=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>}
+          imageWidth="720px"
+          imageHeight="405px"
           header="Donatio Web Extension"
-          paragraph="With out web extension, and leveraging the power of
+          paragraph="With our web extension, and leveraging the power of
           Amazon Pay, you can donate a percent of your purchases
           on supported websites to the Charity of the Day."
           imageLocation="left"
@@ -508,7 +508,7 @@ function LandingPage() {
           imageWidth="375px"
           imageHeight="812px"
           header="Donatio Mobile App"
-          paragraph="And with out mobile app, keep track of your donations, your
+          paragraph="And with our mobile app, keep track of your donations, your
           unlocked medals, and your rankings on the globoal leaderboard.
           
           Join in on this truly interactive experience and support charities in
