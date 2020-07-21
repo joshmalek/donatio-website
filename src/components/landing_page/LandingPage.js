@@ -60,7 +60,7 @@ const IntroArea = () => {
             </a>
           </div>
           <div classNa me="navbar-actions">
-            <a className="navbar-link" style={{cursor: "pointer"}} onClick={() => {
+            <a className="navbar-link" style={{ cursor: "pointer" }} onClick={() => {
               Scroll.animateScroll.scrollTo(1800);
             }}>
               How It Works
@@ -95,8 +95,8 @@ const IntroArea = () => {
                 }}
               >
                 <ParallelButton text="Try It" onclick={() => {
-              Scroll.animateScroll.scrollToBottom();
-            }}/>
+                  Scroll.animateScroll.scrollToBottom();
+                }} />
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@ const CharitySlider = ({ charities }) => {
     await charitySliderAnimator.start({
       transform: `translate(-${
         getWidth(charities[charityIndex][1]) + 80
-      }px, 0px)`,
+        }px, 0px)`,
       transition: { duration: 1 },
     });
     firstCharityAnimator.start({
@@ -487,8 +487,8 @@ function LandingPage() {
           imageWidth="332"
           imageHeight="596"
           header="Gamified Donation Platform"
-          paragraph="Donatio provides a platform by which users can acquire 
-          accolades, points and levels for each donation they make!"
+          paragraph="Donatio provides a platform by which users acquire 
+          medals, points and levels for every donation they make!"
           imageLocation="left"
         />
         <DisplayModals />
@@ -497,9 +497,9 @@ function LandingPage() {
           imageWidth="720px"
           imageHeight="405px"
           header="Donatio Web Extension"
-          paragraph="With our web extension, and leveraging the power of
-          Amazon Pay, you can donate a percent of your purchases
-          on supported websites to the Charity of the Day."
+          paragraph="With our web extension and the power of
+          Amazon Pay, you can donate a percentage of your purchases
+          to the Charity of the Day."
           imageLocation="left"
           icons={[AmazonIcon]}
         />
@@ -509,7 +509,7 @@ function LandingPage() {
           imageHeight="812px"
           header="Donatio Mobile App"
           paragraph="And with our mobile app, keep track of your donations, your
-          unlocked medals, and your rankings on the globoal leaderboard.
+          unlocked medals, and your rankings on the global leaderboard.
           
           Join in on this truly interactive experience and support charities in
           serving their mission."
