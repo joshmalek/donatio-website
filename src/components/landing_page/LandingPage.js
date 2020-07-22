@@ -497,7 +497,10 @@ const DisplayCharityOfDay = () => {
     })
   }, [])
 
-  return (<div>Today's Nonprofit of the Day is: {npo} </div>)
+  return (<div style={{
+    textAlign: "center",
+    marginTop: "100px"
+  }}>Today's Nonprofit of the Day is: {npo} </div>)
 }
 
 function LandingPage() {
