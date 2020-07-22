@@ -499,8 +499,22 @@ const DisplayCharityOfDay = () => {
 
   return (<div style={{
     textAlign: "center",
-    marginTop: "100px"
-  }}>Today's Nonprofit of the Day is: {npo} </div>)
+    marginTop: "100px",
+    fontFamily: "Asap",
+    fontWeight: "600",
+
+  }}>
+   <div style={{display: "inline-block",
+    fontSize: "22px"}}>
+    Today's Nonprofit of the Day is
+   </div>
+   <div style={{display: "inline-block", 
+   border: "1px solid rgba(0, 0, 0, 0.6)", 
+   padding: "10px 5px",
+   borderRadius: "3px"
+   }}>
+    {npo}
+  </div> </div>)
 }
 
 function LandingPage() {
