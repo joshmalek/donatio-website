@@ -505,13 +505,17 @@ const DisplayCharityOfDay = () => {
 
   }}>
    <div style={{display: "inline-block",
-    fontSize: "22px"}}>
+    fontSize: "18px"}}>
     Today's Nonprofit of the Day is
    </div>
    <div style={{display: "inline-block", 
    border: "1px solid rgba(0, 0, 0, 0.6)", 
-   padding: "10px 5px",
-   borderRadius: "3px"
+   padding: "5px 15px",
+   borderRadius: "3px",
+   fontWeight: "400",
+   marginLeft: "20px",
+   fontFamily: "OpenSans",
+   fontSize: "15px"
    }}>
     {npo}
   </div> </div>)
