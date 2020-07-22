@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import TrackVisibility from "react-on-screen";
 import * as Scroll from "react-scroll"
+import axios from "axios";
 import "../../App.css";
 
 import Logo from "../../assets/svg/logo.svg";
@@ -477,11 +478,34 @@ const DisplayModals = () => {
   );
 };
 
+const DisplayCharityOfDay = () => {
+
+  const [npo, setNpo] = useState("")
+
+  useEffect(() => {
+    axios.post("https://3.130.4.139/graphql", {
+      query: "{ NPOofDay { name, _id } }",
+    })
+    .then(res => {
+      console.log(`NPO of Day response`);
+      console.log(res);
+      setNpo(res.data.data.NPOofDay.name);
+    })
+    .catch(err => {
+      console.log(`Error getting charity of the day.`);
+      console.log(err);
+    })
+  }, [])
+
+  return (<div>Today's Nonprofit of the Day is: {npo} </div>)
+}
+
 function LandingPage() {
   return (
     <div>
       <IntroArea />
       <div className="landing-content">
+        <DisplayCharityOfDay />
         <ParagraphWithPicture
           image={TrophySVG}
           imageWidth="332"
